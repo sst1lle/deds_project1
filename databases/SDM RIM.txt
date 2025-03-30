@@ -1,0 +1,307 @@
+CREATE TABLE HumanResources_Department (
+    DepartmentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    GroupName VARCHAR(100),
+    dept_head_id INT,
+    ModifiedDate DATE,
+   
+);
+CREATE TABLE Person_Person (
+    BusnissEntityID INT PRIMARY KEY,
+    PersonType VARCHAR(50),
+    NameStyle VARCHAR(100),
+    Title VARCHAR(255),
+    FullName VARCHAR(100),
+    Suffix VARCHAR(50),
+    EmailPromotion VARCHAR(50),
+    rowguide INT,
+    PhoneNumber VARCHAR(30),
+    Fax VARCHAR(50),
+    ModifiedDate DATE
+);
+
+CREATE TABLE HumanResources_Employee (
+    BusinessEntityID INT PRIMARY KEY,
+    NationalIDNumber INT,
+    LoginID INT,
+    OrganizationNode VARCHAR(50),
+    OrganizationLevel VARCHAR(50),
+    JobTitle VARCHAR(255),
+    BirthDate DATE,
+    MaritalStatus VARCHAR(50),
+    Gender VARCHAR(50),
+    HireDate DATE,
+    SalariedFlag BIT,
+    VacationHours SMALLINT,
+    SickLeaveHours SMALLINT,
+    CurrentFlag BIT,
+    rowguid INT,
+    status BIT,
+    salary DECIMAL(10,2),
+    DepartmentID INT,
+    Manager_id INT,
+    ModifiedDate DATE,
+    FOREIGN KEY (DepartmentID) REFERENCES HumanResources_Department(DepartmentID),
+    FOREIGN KEY (Manager_id) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (BusinessEntityID) REFERENCES Person_Person(BusnissEntityID)
+);
+
+
+
+CREATE TABLE Person_Address (
+    AddressID INT PRIMARY KEY,
+    AddressLine1 VARCHAR(100),
+    AddressLine2 VARCHAR(100),
+    City VARCHAR(50),
+    StateProvence VARCHAR(50),
+    StateCapital VARCHAR(50),
+    PostalCode VARCHAR(20),
+    SpacialLocation VARCHAR(50),
+    Rowguide INT,
+    Country VARCHAR(50),
+    Region VARCHAR(50),
+    ModifiedDate DATE,
+    BusnissEntityID INT,
+    FOREIGN KEY (BusnissEntityID) REFERENCES Person_Person(BusnissEntityID)
+);
+CREATE TABLE Production_ProductCategory (
+    MergedCategoryID INT PRIMARY KEY,
+    ProductCategoryID INT,
+    Name VARCHAR(100),
+    rowguide INT,
+    Description VARCHAR(255),
+    Picture VARCHAR(50),
+    ModifiedDate DATE
+);
+
+CREATE TABLE Shippers (
+    ShipersID INT PRIMARY KEY,
+    CompanyName VARCHAR(100),
+    ShipName VARCHAR(100),
+    ShipAddress VARCHAR(50),
+    ShipCountry VARCHAR(50),
+    ShipPostalCode VARCHAR(20),
+    ShipRegion VARCHAR(50),
+    ShipCity VARCHAR(50),
+    Phone VARCHAR(50)
+);
+
+CREATE TABLE Suppliers (
+    SupplierID INT PRIMARY KEY,
+    CompanyName VARCHAR(100),
+    ConatctName VARCHAR(100),
+    ConatactTitle VARCHAR(255),
+    Adddress VARCHAR(50),
+    City VARCHAR(50),
+    Region VARCHAR(50),
+    PostalCode VARCHAR(20),
+    Counrtry VARCHAR(50),
+    Phone VARCHAR(50),
+    Fax VARCHAR(50),
+    HomePage VARCHAR(50)
+);
+
+
+CREATE TABLE Production_Product (
+    MergedID INT PRIMARY KEY,
+    ProductID INT,
+    Name VARCHAR(100),
+    ProductNumber VARCHAR(30),
+    MakeFlag BIT,
+    FinishedGoodFlag BIT,
+    Color VARCHAR(50),
+    SafetyStockLevel VARCHAR(50),
+    ReorderPoint VARCHAR(50),
+    StandardCost VARCHAR(50),
+    ListPrice VARCHAR(50),
+    Size VARCHAR(50),
+    SizeUnitMeasureCode VARCHAR(20),
+    WeightUnitMeasureCode VARCHAR(20),
+    Weight VARCHAR(50),
+    DaysToManufacture VARCHAR(50),
+    ProductLine VARCHAR(100),
+    Class VARCHAR(100),
+    Style VARCHAR(50),
+    ProductionSubcategoryID INT,
+    ProductModelID INT,
+    SellStartDate DATE,
+    SellEndDate DATE,
+    DiscontinuedDate DATE,
+    rowguid INT,
+    ModifiedDate DATE,
+    MergedCategoryID INT,
+    Discontinued VARCHAR(50),
+    QuantityPerUnit VARCHAR(50),
+    quantity VARCHAR(50), 	
+    description VARCHAR(255),
+    UnitsInStock VARCHAR(50),
+    UnitsOnOrder VARCHAR(50),
+    SupplierID INT,
+    FOREIGN KEY (MergedCategoryID) REFERENCES Production_ProductCategory(MergedCategoryID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+CREATE TABLE Purchasing_Vendor (
+    BusinessEntityID INT PRIMARY KEY,
+    AccountNumber VARCHAR(30),
+    Name VARCHAR(100),
+    CreditRating VARCHAR(50),
+    PreferredVendorStatus VARCHAR(50),
+    ActiveFlag BIT,
+    PurchasingWebServiceURL VARCHAR(50),
+    ModifiedDate DATE
+);
+
+CREATE TABLE Purchasing_PurchaseOrderHeader (
+    PurchaseOrderID INT PRIMARY KEY,
+    RevisionNumber VARCHAR(30),
+    Status BIT,
+    EmployeeID INT,
+    VendorID INT,
+    ShipMethodID INT,
+    OrderDate DATE,
+    ShipDate DATE,
+    SubTotal VARCHAR(50),
+    TaxAmt VARCHAR(50),
+    Freight VARCHAR(50),
+    TotalDue VARCHAR(50),
+    ModifiedDate DATE,
+    FOREIGN KEY (EmployeeID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (VendorID) REFERENCES Purchasing_Vendor(BusinessEntityID),
+    FOREIGN KEY (ShipMethodID) REFERENCES Shippers(ShipersID)
+);
+
+
+CREATE TABLE Purchasing_PurchaseOrderDetail (
+    PurchaseOrderID INT,
+    PurchaseOrderDetailID INT PRIMARY KEY,
+    DueDate DATE,
+    OrderQty VARCHAR(50),
+    MergedID INT,
+    UnitPrice VARCHAR(50),
+    LineTotal VARCHAR(100),
+    ReceivedQty VARCHAR(50),
+    RejectedQty VARCHAR(50),
+    StockedQty VARCHAR(50),
+    ModifiedDate DATE,
+    FOREIGN KEY (PurchaseOrderID) REFERENCES Purchasing_PurchaseOrderHeader(PurchaseOrderID),
+    FOREIGN KEY (MergedID) REFERENCES Production_Product(MergedID)
+);
+CREATE TABLE Sales_SalesTerritory (
+    TerritoryID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    CountryRegionCode VARCHAR(20),
+    Group1 VARCHAR(50),
+    SalesYTD VARCHAR(50),
+    SalesLastYear VARCHAR(50),
+    CostYTD VARCHAR(50),
+    CostLastYear VARCHAR(50),
+    rowguid INT,
+    ModifiedDate DATE,
+    region VARCHAR(50)
+);
+
+CREATE TABLE Sales_Store (
+    BusinessEntityID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    SalesPersonID INT,
+    rowguid INT,
+    ModifiedDate DATE,
+    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(BusinessEntityID)
+);
+
+CREATE TABLE Sales_Customer (
+    CustomerID INT PRIMARY KEY,
+    PersonID INT,
+    StoreID INT,
+    TerritoryID INT,
+    CompanyName VARCHAR(100),
+    AccountNumber VARCHAR(30),
+    rowguid INT,
+    ModifiedDate DATE,
+    FOREIGN KEY (PersonID) REFERENCES Person_Person(BusnissEntityID),
+    FOREIGN KEY (StoreID) REFERENCES Sales_Store(BusinessEntityID),
+    FOREIGN KEY (TerritoryID) REFERENCES Sales_SalesTerritory(TerritoryID)
+);
+CREATE TABLE Sales_SalesOrderHeader (
+    SalesOrderID INT PRIMARY KEY,
+    RevisionNumber VARCHAR(30),
+    OrderDate DATE,
+    DueDate DATE,
+    ShipDate DATE,
+    Status BIT,
+    OnlineOrderFlag BIT,
+    SalesOrderNumber VARCHAR(30),
+    PurchaseOrderNumber VARCHAR(30),
+    AccountNumber VARCHAR(30),
+    CustomerID INT,
+    SalesPersonID INT,
+    TerritoryID INT,
+    BillToAddressID INT,
+    ShipToAddressID INT,
+    ShipMethodID INT,
+    CreditCardID INT,
+    CreditCardApprovalCode VARCHAR(20),
+    CurrencyRateID INT,
+    SubTotal VARCHAR(50),
+    TaxAmt VARCHAR(50),
+    Freight VARCHAR(50),
+    TotalDue VARCHAR(50),
+    Comment VARCHAR(50),
+    rowguid INT,
+    ModifiedDate DATE,
+    ShipVia VARCHAR(50),
+    FOREIGN KEY (CustomerID) REFERENCES Sales_Customer(CustomerID),
+    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (TerritoryID) REFERENCES Sales_SalesTerritory(TerritoryID),
+    FOREIGN KEY (BillToAddressID) REFERENCES Person_Address(AddressID),
+    FOREIGN KEY (ShipToAddressID) REFERENCES Person_Address(AddressID),
+    FOREIGN KEY (ShipMethodID) REFERENCES Shippers(ShipersID)
+);
+
+CREATE TABLE Sales_SalesOrderDetail (
+    SalesOrderDetailID INT PRIMARY KEY,
+    SalesOrderID INT,
+    CarrierTrackingNumber VARCHAR(30),
+    OrderQty VARCHAR(50),
+    MergedID INT,
+    SpecialOfferID INT,
+    UnitPrice VARCHAR(50),
+    UnitPriceDiscount VARCHAR(50),
+    LineTotal VARCHAR(100),
+    line_id INT,
+    rowguid INT,
+    ModifiedDate DATE,
+    FOREIGN KEY (SalesOrderID) REFERENCES Sales_SalesOrderHeader(SalesOrderID),
+    FOREIGN KEY (MergedID) REFERENCES Production_Product(MergedID)
+);
+
+CREATE TABLE Region (
+    RegionID INT PRIMARY KEY, 
+    RegionDescription VARCHAR(255)
+);
+
+CREATE TABLE Territories (
+    TerritoryID INT PRIMARY KEY,
+    TerritoryDescription VARCHAR(255),
+    RegionID INT,
+    FOREIGN KEY (RegionID) REFERENCES Region(RegionID)
+);
+
+
+
+CREATE TABLE EmployeeTerritories (
+    BusinessEntityID INT,
+    TerritoryID INT,
+    PRIMARY KEY (BusinessEntityID, TerritoryID),
+    FOREIGN KEY (BusinessEntityID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (TerritoryID) REFERENCES Territories(TerritoryID)
+);
+
+
+CREATE TABLE Bonus (
+    emp_id INT,
+    bonus_date DATE,
+    bonus_amount DECIMAL(10,2),
+    PRIMARY KEY (emp_id, bonus_date),
+    FOREIGN KEY (emp_id) REFERENCES HumanResources_Employee(BusinessEntityID)
+);

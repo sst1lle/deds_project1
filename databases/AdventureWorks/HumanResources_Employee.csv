@@ -1,0 +1,291 @@
+BusinessEntityID,NationalIDNumber,LoginID,OrganizationNode,OrganizationLevel,JobTitle,BirthDate,MaritalStatus,Gender,HireDate,SalariedFlag,VacationHours,SickLeaveHours,CurrentFlag,rowguid,ModifiedDate,DepartmentID
+1,"295847284","adventure-works\ken0",,,"Chief Executive Officer","1979-01-29","S","M","2019-01-14",-1,99,69,-1,"{F01251E5-96A3-448D-981E0F99D789110D}","06/30/24 00:00:00",16
+2,"245797967","adventure-works\terri0","X",1,"Vice President of Engineering","1981-08-01","S","F","2018-01-31",-1,1,20,-1,"{45E8F437-670D-4409-93CBF9424A40D6EE}","06/30/24 00:00:00",1
+3,"509647174","adventure-works\roberto0","Z¿",2,"Engineering Manager","1984-11-12","M","M","2017-11-11",-1,2,21,-1,"{9BBBFB2C-EFBB-4217-9AB7F97689328841}","06/30/24 00:00:00",1
+4,"112457891","adventure-works\rob0","Z÷",3,"Senior Tool Designer","1984-12-23","S","M","2017-12-05",0,48,80,-1,"{59747955-87B8-443F-8ED4F8AD3AFDF3A9}","06/30/24 00:00:00",2
+5,"695256908","adventure-works\gail0","Z⁄",3,"Design Engineer","1962-09-27","M","F","2018-01-06",-1,5,22,-1,"{EC84AE09-F9B8-4A15-B4A96CCBAB919B08}","06/30/24 00:00:00",1
+6,"998320692","adventure-works\jossef0","Zﬁ",3,"Design Engineer","1969-03-11","M","M","2018-01-24",-1,6,23,-1,"{E39056F1-9CD5-478D-894514ACA7FBDCDD}","06/30/24 00:00:00",1
+7,"134969118","adventure-works\dylan0","Z·",3,"Research and Development Manager","1997-02-24","M","M","2019-02-08",-1,61,50,-1,"{4F46DECA-EF01-41FD-98290ADAB368E431}","06/30/24 00:00:00",6
+8,"811994146","adventure-works\diane1","Z·X",4,"Research and Development Engineer","1996-06-05","S","F","2018-12-29",-1,62,51,-1,"{31112635-663B-4018-B4A2A685C0BF48A4}","06/30/24 00:00:00",6
+9,"658797903","adventure-works\gigi0","Z·h",4,"Research and Development Engineer","1989-01-21","M","F","2019-01-16",-1,63,51,-1,"{50B6CDC6-7570-47EF-957048A64B5F2ECF}","06/30/24 00:00:00",6
+10,"879342154","adventure-works\michael6","Z·x",4,"Research and Development Manager","1994-11-30","M","M","2019-05-03",-1,16,64,-1,"{EAA43680-5571-40CB-AB1A3BF68F04459E}","06/30/24 00:00:00",6
+11,"974026903","adventure-works\ovidiu0","Z„",3,"Senior Tool Designer","1988-01-17","S","M","2020-12-05",0,7,23,-1,"{F68C7C19-FAC1-438C-9BB7AC33FCC341C3}","06/30/24 00:00:00",2
+12,"480168528","adventure-works\thierry0","Z„X",4,"Tool Designer","1969-07-29","M","M","2017-12-11",0,9,24,-1,"{1D955171-E773-4FAD-838240FD898D5D4D}","06/30/24 00:00:00",2
+13,"486228782","adventure-works\janice0","Z„h",4,"Tool Designer","1999-05-28","M","F","2020-12-23",0,8,24,-1,"{954B91B6-5AA7-48C2-86856E11C6E5C49A}","06/30/24 00:00:00",2
+14,"42487730","adventure-works\michael8","ZÂ",3,"Senior Design Engineer","1989-06-16","S","M","2020-12-30",-1,3,21,-1,"{46286CA4-46DD-4DDB-912885B67E98D1A9}","06/30/24 00:00:00",1
+15,"56920285","adventure-works\sharon0","ZÁ",3,"Design Engineer","1971-05-02","M","F","2021-01-18",-1,4,22,-1,"{54F2FDC0-87C4-4065-A7A89AC8EA624235}","06/30/24 00:00:00",1
+16,"24756624","adventure-works\david0","h",1,"Marketing Manager","1985-03-19","S","M","2017-12-20",-1,40,40,-1,"{E87029AA-2CBA-4C03-B948D83AF0313E28}","06/30/24 00:00:00",4
+17,"253022876","adventure-works\kevin0","j¿",2,"Marketing Assistant","1997-05-03","S","M","2017-01-26",0,42,41,-1,"{1B480240-95C0-410F-A717EB29943C8886}","06/30/24 00:00:00",4
+18,"222969461","adventure-works\john5","k@",2,"Marketing Specialist","1988-03-06","S","M","2021-02-07",0,48,44,-1,"{64730415-1F58-4E5B-8FA85E4DAEBA53B4}","06/30/24 00:00:00",4
+19,"52541318","adventure-works\mary2","k¿",2,"Marketing Assistant","1988-01-29","S","F","2021-02-14",0,43,41,-1,"{1F6DA901-C7F7-48A8-8EEFD81868D72B52}","06/30/24 00:00:00",4
+20,"323403273","adventure-works\wanida0","l ",2,"Marketing Assistant","1985-03-17","M","F","2021-01-07",0,41,40,-1,"{43CCA446-DA1C-454C-8530873AD2923E1B}","06/30/24 00:00:00",4
+21,"243322160","adventure-works\terry0","l`",2,"Marketing Specialist","1996-02-04","M","M","2019-03-02",0,44,42,-1,"{AD0D7626-4506-45C4-898F9D7A0E13AABD}","06/30/24 00:00:00",4
+22,"95958330","adventure-works\sariya0","l†",2,"Marketing Specialist","1997-05-21","S","M","2018-12-12",0,45,42,-1,"{AF21F1B7-0691-48AD-B325B8F2D7B2268A}","06/30/24 00:00:00",4
+23,"767955365","adventure-works\mary0","l‡",2,"Marketing Specialist","1972-09-13","M","F","2019-01-12",0,46,43,-1,"{90899830-127E-4876-85CA7F6E03025281}","06/30/24 00:00:00",4
+24,"72636981","adventure-works\jill0","m",2,"Marketing Specialist","1989-06-18","M","F","2019-01-18",0,47,43,-1,"{53575C58-FBA1-4C1A-B8FF95E050B44393}","06/30/24 00:00:00",4
+25,"519899904","adventure-works\james1","x",1,"Vice President of Production","1993-01-07","S","M","2019-02-03",-1,64,52,-1,"{D7314F24-2AF1-429C-9BBB4038F45F3E6C}","06/30/24 00:00:00",7
+26,"277173473","adventure-works\peter0","z¿",2,"Production Control Manager","1992-11-03","M","M","2018-12-01",-1,43,41,-1,"{69D5D162-E817-45E7-9DEC5D9B8310E7B1}","12/26/24 09:17:09",8
+27,"446466105","adventure-works\jo0","z÷",3,"Production Supervisor - WC60","1966-10-08","S","F","2018-02-27",0,80,60,-1,"{83FFAAC6-B895-481F-B89714F965D4DA47}","06/30/24 00:00:00",7
+28,"14417807","adventure-works\guy1","z÷∞",4,"Production Technician - WC60","1998-03-13","M","M","2016-06-30",0,21,30,-1,"{AAE1D04A-C237-4974-B4D5935247737718}","06/30/24 00:00:00",7
+29,"948320468","adventure-works\mark1","z÷–",4,"Production Technician - WC60","1989-09-25","S","M","2019-01-23",0,19,29,-1,"{CDB2C6DF-93E5-4558-91C8424D5E7C658B}","06/30/24 00:00:00",7
+30,"410742000","adventure-works\britta0","z÷",4,"Production Technician - WC60","1999-09-28","M","F","2019-01-29",0,14,27,-1,"{FC12677F-42F8-4790-AD69685088ED7E5F}","06/30/24 00:00:00",7
+31,"750246141","adventure-works\margie0","z◊",4,"Production Technician - WC60","1996-05-20","M","F","2019-01-04",0,18,29,-1,"{352D6E2F-655B-49A2-9FECEFD7D8CD0D30}","06/30/24 00:00:00",7
+32,"330211482","adventure-works\rebecca0","z◊",4,"Production Technician - WC60","1987-07-10","M","F","2018-12-29",0,23,31,-1,"{BDADEB5C-A596-4DA1-88BA842C7A0CC10F}","06/30/24 00:00:00",7
+33,"801758002","adventure-works\annik0","z◊(",4,"Production Technician - WC60","1986-12-26","M","M","2018-12-17",0,17,28,-1,"{51FDE6AC-BD50-467C-90E510CA7310455C}","06/30/24 00:00:00",7
+34,"754372876","adventure-works\suchitra0","z◊8",4,"Production Technician - WC60","1997-06-10","M","F","2019-02-16",0,15,27,-1,"{6ADBD932-0DA5-4F5C-AF678E3A53630896}","06/30/24 00:00:00",7
+35,"999440576","adventure-works\brandon0","z◊D",4,"Production Technician - WC60","1987-01-10","M","M","2019-02-08",0,22,31,-1,"{CA5D1935-44E2-4C45-93BB809E59F56796}","06/30/24 00:00:00",7
+36,"788456780","adventure-works\jose0","z◊L",4,"Production Technician - WC60","1994-07-31","M","M","2019-02-10",0,20,30,-1,"{9E912556-88BA-41EE-B946CB84AB4C1102}","06/30/24 00:00:00",7
+37,"442121106","adventure-works\chris2","z◊T",4,"Production Technician - WC60","1996-08-07","S","M","2019-03-07",0,16,28,-1,"{77B384C7-AFFB-4816-992BF5B3034EE4FF}","06/30/24 00:00:00",7
+38,"6298838","adventure-works\kim1","z◊\",4,"Production Technician - WC60","1976-12-14","M","F","2020-01-16",0,24,32,-1,"{891C27F4-28CC-44BB-BEA3DA5EA7FBE957}","06/30/24 00:00:00",7
+39,"461786517","adventure-works\ed0","z◊d",4,"Production Technician - WC60","1981-09-11","S","M","2020-02-05",0,25,32,-1,"{8EF22FB3-AF37-4B44-8862D60A7CB09D82}","06/30/24 00:00:00",7
+40,"309738752","adventure-works\jolynn0","z⁄",3,"Production Supervisor - WC60","1966-01-16","S","F","2017-12-26",0,82,61,-1,"{2CC71B96-F421-485E-98328723337749BB}","06/30/24 00:00:00",7
+41,"458159238","adventure-works\bryan0","z⁄∞",4,"Production Technician - WC60","1983-08-27","S","M","2019-01-21",0,35,37,-1,"{4652D4E4-6A27-47ED-9F51C377E293DA28}","06/30/24 00:00:00",7
+42,"339712426","adventure-works\james0","z⁄–",4,"Production Technician - WC60","1994-07-25","M","M","2018-12-27",0,39,39,-1,"{82E52D5A-165B-4C6D-9773C3A6B6332ECD}","06/30/24 00:00:00",7
+43,"693325305","adventure-works\nancy0","z⁄",4,"Production Technician - WC60","1998-11-19","M","F","2019-01-02",0,34,37,-1,"{6B7EB306-9A00-496A-98A94E94FE72F77C}","06/30/24 00:00:00",7
+44,"276751903","adventure-works\simon0","z€",4,"Production Technician - WC60","2000-05-17","S","M","2018-12-08",0,38,39,-1,"{F734D38A-56B5-471E-8DEDA682E958A9B3}","06/30/24 00:00:00",7
+45,"500412746","adventure-works\thomas0","z€",4,"Production Technician - WC60","1996-01-10","M","M","2019-02-26",0,37,38,-1,"{8FF3AF67-32F2-4A08-98C3A40F842D41A3}","06/30/24 00:00:00",7
+46,"66073987","adventure-works\eugene1","z€(",4,"Production Technician - WC60","1986-02-10","S","M","2019-02-08",0,36,38,-1,"{33543B35-77DA-4600-A41B1EAFEA0AD643}","06/30/24 00:00:00",7
+47,"33237992","adventure-works\andrew0","zﬁ",3,"Production Supervisor - WC10","1998-09-06","S","M","2019-02-22",0,65,52,-1,"{08365B05-C143-4260-A93C6B69418B1946}","06/30/24 00:00:00",7
+48,"690627818","adventure-works\ruth0","zﬁ∞",4,"Production Technician - WC10","1966-06-04","M","F","2018-01-06",0,83,61,-1,"{3E3B6905-209E-442E-B8A89A0980241C6A}","06/30/24 00:00:00",7
+49,"912265825","adventure-works\barry0","zﬁ–",4,"Production Technician - WC10","1966-03-26","S","M","2018-01-07",0,88,64,-1,"{756A60AE-378F-43D8-9F931E821D1EAF52}","06/30/24 00:00:00",7
+50,"844973625","adventure-works\sidney0","zﬁ",4,"Production Technician - WC10","1966-08-30","M","M","2018-02-02",0,84,62,-1,"{40D603D9-7F99-48B7-A580B17CF429BED2}","06/30/24 00:00:00",7
+51,"132674823","adventure-works\jeffrey0","zﬂ",4,"Production Technician - WC10","1966-07-11","S","M","2018-02-20",0,85,62,-1,"{6E086F41-B81D-4BDC-9F130EEC488DC43E}","06/30/24 00:00:00",7
+52,"565090917","adventure-works\doris0","zﬂ",4,"Production Technician - WC10","1966-04-04","M","F","2018-03-10",0,86,63,-1,"{692B8826-03B4-4C3B-82FC1FC6F1409689}","06/30/24 00:00:00",7
+53,"9659517","adventure-works\diane0","zﬂ(",4,"Production Technician - WC10","1966-03-29","M","F","2018-03-28",0,87,63,-1,"{C334B2D2-0C56-4906-9095F1D07A98CBEC}","06/30/24 00:00:00",7
+54,"109272464","adventure-works\bonnie0","zﬂ8",4,"Production Technician - WC10","1996-09-10","M","F","2020-01-01",0,89,64,-1,"{E950A52A-DF61-4FEC-9063545664D65B89}","06/30/24 00:00:00",7
+55,"233069302","adventure-works\taylor0","z·",3,"Production Supervisor - WC50","1966-04-01","M","M","2018-02-08",0,79,59,-1,"{28F7EF89-2793-4989-B67D25046543C1E3}","06/30/24 00:00:00",7
+56,"652535724","adventure-works\denise0","z·X",4,"Production Technician - WC50","1998-07-06","M","F","2019-02-05",0,9,24,-1,"{77878C43-F16E-437D-892F3CFCC0715A0A}","06/30/24 00:00:00",7
+57,"10708100","adventure-works\frank1","z·h",4,"Production Technician - WC50","1981-07-24","S","M","2019-02-23",0,10,25,-1,"{B395CD84-77BA-4D3C-A49DD9E8D6CF100B}","06/30/24 00:00:00",7
+58,"571658797","adventure-works\kendall0","z·x",4,"Production Technician - WC50","1996-05-30","M","M","2018-12-05",0,11,25,-1,"{65207627-5521-4A8E-AD3CB2F1B5226B85}","06/30/24 00:00:00",7
+59,"843479922","adventure-works\bob0","z·Ñ",4,"Production Technician - WC50","1989-08-16","S","M","2018-12-24",0,12,26,-1,"{68616AEA-81E5-4940-A7E46FBA882BCCF6}","06/30/24 00:00:00",7
+60,"827686041","adventure-works\pete0","z·å",4,"Production Technician - WC50","1987-02-03","S","M","2019-01-11",0,13,26,-1,"{1F1D813D-3EDC-4274-8E9B4519D71685B6}","06/30/24 00:00:00",7
+61,"92096924","adventure-works\diane2","z·î",4,"Production Technician - WC50","1999-08-09","S","F","2019-01-18",0,8,24,-1,"{721A2921-C415-46DE-911113F25F428B8B}","06/30/24 00:00:00",7
+62,"494170342","adventure-works\john0","z„",3,"Production Supervisor - WC60","1966-08-07","M","M","2018-03-17",0,81,60,-1,"{D4ED1F78-7C28-479B-BFEFA73228BA2AAA}","06/30/24 00:00:00",7
+63,"414476027","adventure-works\maciej0","z„X",4,"Production Technician - WC60","1965-01-30","S","M","2020-01-29",0,30,35,-1,"{3229D93F-6A14-4BAC-ABC5A91B9ECFB4D3}","06/30/24 00:00:00",7
+64,"582347317","adventure-works\michael7","z„h",4,"Production Technician - WC60","1983-09-05","S","M","2020-02-23",0,26,33,-1,"{492B24BD-BDE9-4371-B96ECCD72264B91F}","06/30/24 00:00:00",7
+65,"8066363","adventure-works\randy0","z„x",4,"Production Technician - WC60","1980-04-28","M","M","2020-02-23",0,29,34,-1,"{9A08108D-E039-4862-8F9355F18017AD72}","06/30/24 00:00:00",7
+66,"834186596","adventure-works\karan0","z„Ñ",4,"Production Technician - WC60","1980-03-07","S","M","2019-12-22",0,28,34,-1,"{08B1BA74-DD80-4FDA-832793268B84977B}","06/30/24 00:00:00",7
+67,"63179277","adventure-works\jay0","z„å",4,"Production Technician - WC60","1986-02-11","S","M","2019-03-05",0,32,36,-1,"{18187809-5294-474F-85A1D5BE6BD518D6}","06/30/24 00:00:00",7
+68,"537092325","adventure-works\charles0","z„î",4,"Production Technician - WC60","1981-09-02","S","M","2019-12-03",0,27,33,-1,"{CDC11292-DF74-4FB0-86765B2AA4687142}","06/30/24 00:00:00",7
+69,"752513276","adventure-works\steve0","z„ú",4,"Production Technician - WC60","2001-04-06","S","M","2019-02-15",0,31,35,-1,"{12F678D7-EAD3-4CF4-8518A19AACF2A6D4}","06/30/24 00:00:00",7
+70,"36151748","adventure-works\david2","z„¢",4,"Production Technician - WC60","1994-12-29","M","M","2018-12-15",0,33,36,-1,"{FC617BB8-D2A3-4374-873C8EF38D80127D}","06/30/24 00:00:00",7
+71,"578935259","adventure-works\michael3","zÂ",3,"Production Supervisor - WC30","1999-01-29","S","M","2019-02-15",0,70,55,-1,"{1AD772D7-7B4A-4A7B-867649DD7608CB94}","06/30/24 00:00:00",7
+72,"443968955","adventure-works\steven0","zÂX",4,"Production Technician - WC30","1987-05-14","M","M","2018-12-01",0,41,40,-1,"{0A8937C9-68AA-4D48-BA4EB40493D764AA}","06/30/24 00:00:00",7
+73,"138280935","adventure-works\carole0","zÂh",4,"Production Technician - WC30","1993-10-19","M","F","2018-12-19",0,42,41,-1,"{C76A41F1-A390-4AE4-A82A2A87764C6391}","06/30/24 00:00:00",7
+74,"420023788","adventure-works\bjorn0","zÂx",4,"Production Technician - WC30","1999-11-06","S","M","2019-01-07",0,43,41,-1,"{A942E1E0-2D5E-4858-97C0947020E96860}","06/30/24 00:00:00",7
+75,"363996959","adventure-works\michiko0","zÂÑ",4,"Production Technician - WC30","1992-06-27","S","M","2019-01-26",0,44,42,-1,"{F359F5B6-5E18-4C62-853114D951911CE5}","06/30/24 00:00:00",7
+76,"227319668","adventure-works\carol0","zÂå",4,"Production Technician - WC30","1998-10-17","M","F","2019-02-12",0,45,42,-1,"{8D0182A3-5B59-4EEA-9B3CC7F05DA9A2CE}","06/30/24 00:00:00",7
+77,"301435199","adventure-works\merav0","zÂî",4,"Production Technician - WC30","1993-05-13","M","F","2019-03-03",0,46,43,-1,"{2EE7914A-62D3-473B-A0E1E4E55341EC4E}","06/30/24 00:00:00",7
+78,"370989364","adventure-works\reuben0","zÁ",3,"Production Supervisor - WC40","1997-08-27","M","M","2018-12-15",0,72,56,-1,"{71EEE2A6-B9B3-4BF4-894901239DF7C901}","06/30/24 00:00:00",7
+79,"697712387","adventure-works\eric1","zÁX",4,"Production Technician - WC40","1976-12-08","M","M","2020-01-24",0,60,50,-1,"{55F62E38-9457-46C8-A824E46A3117A935}","06/30/24 00:00:00",7
+80,"943170460","adventure-works\sandeep0","zÁh",4,"Production Technician - WC40","1980-12-03","S","M","2020-01-17",0,65,52,-1,"{606C21E2-3EC0-48A6-A9FE6BC8123AC786}","06/30/24 00:00:00",7
+81,"413787783","adventure-works\mihail0","zÁx",4,"Production Technician - WC40","1981-03-09","S","M","2019-12-29",0,64,52,-1,"{03A9BA14-0D5B-4671-B8512C1721EFBF01}","06/30/24 00:00:00",7
+82,"58791499","adventure-works\jack1","zÁÑ",4,"Production Technician - WC40","1983-08-29","S","M","2020-03-03",0,62,51,-1,"{D308D387-F7F3-4B5F-ABDAFAF5574245CD}","06/30/24 00:00:00",7
+83,"988315686","adventure-works\patrick1","zÁå",4,"Production Technician - WC40","1983-12-23","M","M","2020-02-12",0,61,50,-1,"{296C52AE-169F-4292-975DC508476DCECF}","06/30/24 00:00:00",7
+84,"947029962","adventure-works\frank3","zÁî",4,"Production Technician - WC40","1962-03-02","M","M","2020-02-05",0,66,53,-1,"{9AF24ACC-EA3E-4EFE-B5E34762C496D57C}","06/30/24 00:00:00",7
+85,"1662732","adventure-works\brian2","zÁú",4,"Production Technician - WC40","1980-12-23","S","M","2019-12-11",0,63,51,-1,"{C294F676-CAAF-4924-9730BC81AE408BE1}","06/30/24 00:00:00",7
+86,"769680433","adventure-works\ryan0","zÁ¢",4,"Production Technician - WC40","1982-06-13","M","M","2019-01-05",0,59,49,-1,"{10E5BD6F-2B9C-4192-A94D6A2D50EA1ADB}","06/30/24 00:00:00",7
+87,"7201901","adventure-works\cristian0","zËÄ",3,"Production Supervisor - WC10","1994-04-11","M","M","2018-12-22",0,67,53,-1,"{5BE16416-8570-417D-9E54047DB468B5E9}","06/30/24 00:00:00",7
+88,"294148271","adventure-works\betsy0","zË¨",4,"Production Technician - WC10","1976-12-17","S","F","2019-12-18",0,99,69,-1,"{EBCDBA1C-6C1D-4D36-90F71893755C85E3}","06/30/24 00:00:00",7
+89,"90888098","adventure-works\patrick0","zË¥",4,"Production Technician - WC10","1996-09-10","S","M","2020-02-01",0,96,68,-1,"{D5FBE9E6-B8C5-484C-B4B848059E0EF267}","06/30/24 00:00:00",7
+90,"82638150","adventure-works\danielle0","zËº",4,"Production Technician - WC10","1996-09-07","S","F","2020-02-20",0,97,68,-1,"{BB886159-1400-4264-B7C9A3769BEB1274}","06/30/24 00:00:00",7
+91,"390124815","adventure-works\kimberly0","zË¬",4,"Production Technician - WC10","1996-09-13","S","F","2020-01-12",0,95,67,-1,"{CE256B6C-1EEE-43ED-99697CAC480FF4D7}","06/30/24 00:00:00",7
+92,"826454897","adventure-works\tom0","zË∆",4,"Production Technician - WC10","1996-10-01","M","M","2020-03-10",0,98,69,-1,"{B3BF7FC5-2014-48CE-B7BB76124FA8446C}","06/30/24 00:00:00",7
+93,"778552911","adventure-works\kok-ho0","zÈÄ",3,"Production Supervisor - WC50","1990-04-28","S","M","2018-12-27",0,78,59,-1,"{57FB2C0F-B105-49F0-967A88F3D743CB3F}","06/30/24 00:00:00",7
+94,"718299860","adventure-works\russell0","zÈ¨",4,"Production Technician - WC50","1982-11-25","M","M","2018-12-12",0,6,23,-1,"{6B10192F-D570-47C4-82C93D979B1EFDC1}","06/30/24 00:00:00",7
+95,"674171828","adventure-works\jim0","zÈ¥",4,"Production Technician - WC50","1996-09-08","M","M","2018-12-19",0,1,20,-1,"{6175876E-8FCC-4917-BE06FC358515E6DF}","06/30/24 00:00:00",7
+96,"912141525","adventure-works\elizabeth0","zÈº",4,"Production Technician - WC50","2000-01-25","M","F","2019-03-02",0,5,22,-1,"{62A9F73F-6443-4F2F-B86418186614BFB6}","06/30/24 00:00:00",7
+97,"370581729","adventure-works\mandar0","zÈ¬",4,"Production Technician - WC50","1996-03-21","S","M","2019-02-10",0,0,20,-1,"{1F0E068A-48C5-40BF-8190565150EFDADD}","06/30/24 00:00:00",7
+98,"152085091","adventure-works\sameer0","zÈ∆",4,"Production Technician - WC50","1988-06-26","M","M","2019-02-11",0,4,22,-1,"{A703169F-1563-488E-914DD784FD07F29A}","06/30/24 00:00:00",7
+99,"431859843","adventure-works\nuan0","zÈ ",4,"Production Technician - WC50","1989-03-29","S","M","2019-01-06",0,2,21,-1,"{A6089357-2F2F-48CC-AB3CD9B75A3C09D7}","06/30/24 00:00:00",7
+100,"204035155","adventure-works\lolan0","zÈŒ",4,"Production Technician - WC50","1983-01-24","M","M","2019-01-12",0,7,23,-1,"{9B9B768D-7CC1-4DCE-87CB765AB73A6AFF}","06/30/24 00:00:00",7
+101,"153288994","adventure-works\houman0","zÈ—",4,"Production Technician - WC50","1981-08-30","M","M","2019-01-25",0,3,21,-1,"{9CE8B2E8-9944-4BA5-97DE441D8314F161}","06/30/24 00:00:00",7
+102,"360868122","adventure-works\zheng0","zÍÄ",3,"Production Supervisor - WC10","1993-10-26","S","M","2018-12-03",0,66,53,-1,"{C75F2740-ACE3-4EBF-91C57AB352E1095F}","06/30/24 00:00:00",7
+103,"455563743","adventure-works\ebru0","zÍ¨",4,"Production Technician - WC10","1996-09-22","S","M","2019-12-06",0,93,66,-1,"{6C25A32B-88B5-4F84-A129F7F688DFA588}","06/30/24 00:00:00",7
+104,"717889520","adventure-works\mary1","zÍ¥",4,"Production Technician - WC10","1996-09-19","M","F","2019-12-25",0,94,67,-1,"{6DC9F7D0-5664-4E4A-90F57AB85EBB02E6}","06/30/24 00:00:00",7
+105,"801365500","adventure-works\kevin2","zÍº",4,"Production Technician - WC10","1996-09-19","S","M","2019-12-25",0,90,65,-1,"{8B21E53D-E705-479A-B32E6E63AC2F4BCD}","06/30/24 00:00:00",7
+106,"561196580","adventure-works\john4","zÍ¬",4,"Production Technician - WC10","1996-09-28","S","M","2020-02-27",0,92,66,-1,"{D4CF23D9-21B6-45E4-827C22890DF0373B}","06/30/24 00:00:00",7
+107,"393421437","adventure-works\christopher0","zÍ∆",4,"Production Technician - WC10","1996-10-01","M","M","2020-02-08",0,91,65,-1,"{F71C6055-557B-4660-86FF8C0FA14B24E6}","06/30/24 00:00:00",7
+108,"630184120","adventure-works\jinghao0","zÎÄ",3,"Production Supervisor - WC50","1999-02-05","S","M","2018-12-08",0,77,58,-1,"{2BCA07D3-F2AC-4406-904FE09156F3EB3E}","06/30/24 00:00:00",7
+109,"113695504","adventure-works\alice0","zÎ¨",4,"Production Technician - WC50","1988-01-26","M","F","2018-12-07",0,95,67,-1,"{7E632B21-0D11-4BBA-8A688CAE14C20AE6}","06/30/24 00:00:00",7
+110,"857651804","adventure-works\jun0","zÎ¥",4,"Production Technician - WC50","1989-07-06","S","M","2018-12-14",0,90,65,-1,"{9C5F84D1-FB96-4D82-92A1F932903DEAAD}","06/30/24 00:00:00",7
+111,"415823523","adventure-works\suroor0","zÎº",4,"Production Technician - WC50","1988-02-25","S","M","2018-12-17",0,93,66,-1,"{14010B0E-C101-4E41-B78821923399E512}","06/30/24 00:00:00",7
+112,"981597097","adventure-works\john1","zÎ¬",4,"Production Technician - WC50","1988-05-31","S","M","2019-01-01",0,91,65,-1,"{B6998410-EE0F-4307-9E6EFE348F11012D}","06/30/24 00:00:00",7
+113,"54759846","adventure-works\linda0","zÎ∆",4,"Production Technician - WC50","1997-07-17","M","F","2018-12-25",0,96,68,-1,"{FB84759C-B687-43B2-8727125EFE0F5E13}","06/30/24 00:00:00",7
+114,"342607223","adventure-works\mindaugas0","zÎ ",4,"Production Technician - WC50","1988-05-07","M","M","2019-01-13",0,97,68,-1,"{1D784088-DACB-4185-9F603D2DB4925BA5}","06/30/24 00:00:00",7
+115,"563680513","adventure-works\angela0","zÎŒ",4,"Production Technician - WC50","2001-05-31","S","F","2019-01-20",0,92,66,-1,"{4958E1C3-C872-4222-954E09D2060EA7EF}","06/30/24 00:00:00",7
+116,"398737566","adventure-works\michael2","zÎ—",4,"Production Technician - WC50","1984-05-03","S","M","2019-01-31",0,98,69,-1,"{C6EB2566-CF28-4602-9A255B91C8728838}","06/30/24 00:00:00",7
+117,"599942664","adventure-works\chad0","zÎ”",4,"Production Technician - WC50","2000-08-04","M","M","2019-02-18",0,99,69,-1,"{83A32D4C-4725-478F-999791739BB957BA}","06/30/24 00:00:00",7
+118,"222400012","adventure-works\don0","zÎ’",4,"Production Technician - WC50","1981-06-13","M","M","2019-02-13",0,88,64,-1,"{E720053D-922E-4C91-B81AA1CA4EF8BB0E}","06/30/24 00:00:00",7
+119,"334834274","adventure-works\michael4","zÎ◊",4,"Production Technician - WC50","1999-06-15","S","M","2019-02-25",0,94,67,-1,"{EB27C026-9470-4450-8D5E1F38A41793B5}","06/30/24 00:00:00",7
+120,"211789056","adventure-works\kitti0","zÎŸ",4,"Production Technician - WC50","1997-06-06","S","F","2019-03-04",0,89,64,-1,"{49A05524-FA34-45B1-95BC489901DC5B50}","06/30/24 00:00:00",7
+121,"521265716","adventure-works\pilar0","zÏÄ",3,"Shipping and Receiving Supervisor","1982-09-09","S","M","2019-01-02",-1,93,66,-1,"{01BCCE22-D63A-4C3F-9BA8D3D5A4C3BD52}","06/30/24 00:00:00",15
+122,"586486572","adventure-works\susan0","zÏ¨",4,"Stocker","1988-02-17","S","F","2018-12-07",0,97,68,-1,"{923ECFD6-E202-429A-91416CB183531439}","06/30/24 00:00:00",15
+123,"337752649","adventure-works\vamsi0","zÏ¥",4,"Shipping and Receiving Clerk","1987-03-18","M","M","2018-12-07",0,95,67,-1,"{A8838AB2-99DE-415C-8675D82EBF1C4752}","06/30/24 00:00:00",15
+124,"420776180","adventure-works\kim0","zÏº",4,"Stocker","1994-04-30","S","F","2018-12-26",0,98,69,-1,"{6150F197-7923-40D4-84F2936207D468AB}","06/30/24 00:00:00",15
+125,"584205124","adventure-works\matthias0","zÏ¬",4,"Shipping and Receiving Clerk","1983-11-11","M","M","2019-01-20",0,94,67,-1,"{54ED63DC-C62C-4CC7-89C2015DF49C49A5}","06/30/24 00:00:00",15
+126,"652779496","adventure-works\jimmy0","zÏ∆",4,"Stocker","1995-05-04","M","M","2019-02-26",0,96,68,-1,"{96442787-9520-4955-A45738AFDDB6FF13}","06/30/24 00:00:00",15
+127,"750905084","adventure-works\david4","zÌÄ",3,"Production Supervisor - WC40","1993-07-02","S","M","2019-01-03",0,73,56,-1,"{516538E8-115B-44F4-AA7BE6C1D9F8ADFC}","06/30/24 00:00:00",7
+128,"384162788","adventure-works\paul0","zÌ¨",4,"Production Technician - WC40","1990-11-13","S","M","2018-12-04",0,68,54,-1,"{0217049E-1566-42B6-802741B751E2B00B}","06/30/24 00:00:00",7
+129,"502058701","adventure-works\gary0","zÌ¥",4,"Production Technician - WC40","1998-05-16","S","M","2018-12-22",0,69,54,-1,"{A03D6052-1F85-4EBE-AAC9B67CFDCD91A6}","06/30/24 00:00:00",7
+130,"578953538","adventure-works\rob1","zÌº",4,"Production Technician - WC40","1983-08-04","S","M","2019-02-13",0,71,55,-1,"{54FDA597-6822-42B4-B12863ECA03071F2}","06/30/24 00:00:00",7
+131,"273260055","adventure-works\baris0","zÌ¬",4,"Production Technician - WC40","2000-10-07","S","M","2019-02-15",0,72,56,-1,"{232D68BF-DF58-48F9-923553BD4B009B4B}","06/30/24 00:00:00",7
+132,"1300049","adventure-works\nicole0","zÌ∆",4,"Production Technician - WC40","1996-04-09","M","F","2019-02-22",0,67,53,-1,"{15671E3B-016F-41FD-840B5A9F7D776D9A}","06/30/24 00:00:00",7
+133,"830150469","adventure-works\michael1","zÌ ",4,"Production Technician - WC40","2001-01-04","S","M","2019-01-10",0,70,55,-1,"{416BF905-7D6C-4692-8FD640F6C4F9ECC4}","06/30/24 00:00:00",7
+134,"45615666","adventure-works\eric0","zÓÄ",3,"Production Supervisor - WC20","1995-01-19","M","M","2019-01-14",0,40,40,-1,"{2ABCF39B-88D7-49FA-820A83D223322BA5}","06/30/24 00:00:00",7
+135,"964089218","adventure-works\ivo0","zÓ¨",4,"Production Technician - WC20","1992-01-03","M","M","2018-12-04",0,9,24,-1,"{D83A26F3-7EA7-477B-A5BB7EAADFC13A09}","06/30/24 00:00:00",7
+136,"701156975","adventure-works\sylvester0","zÓ¥",4,"Production Technician - WC20","1980-11-12","M","M","2019-12-11",0,4,22,-1,"{D9C43D08-3882-4E5C-BDF0F6BD7004CD04}","06/30/24 00:00:00",7
+137,"63761469","adventure-works\anibal0","zÓº",4,"Production Technician - WC20","1984-09-05","S","F","2019-02-23",0,8,24,-1,"{BC18A829-F0CE-4EAF-97852D84C86F925A}","06/30/24 00:00:00",7
+138,"25011600","adventure-works\samantha0","zÓ¬",4,"Production Technician - WC20","1997-11-22","M","F","2019-02-04",0,7,23,-1,"{1629EDDD-D0AE-4CB9-A59C3A175F7027E5}","06/30/24 00:00:00",7
+139,"113393530","adventure-works\hung-fu0","zÓ∆",4,"Production Technician - WC20","1981-10-23","S","M","2020-01-06",0,0,20,-1,"{065D8D5F-9504-4FFE-98DCE69677F19F15}","06/30/24 00:00:00",7
+140,"339233463","adventure-works\prasanna0","zÓ ",4,"Production Technician - WC20","1963-04-30","M","M","2020-01-22",0,5,22,-1,"{72ED240A-0FD8-4423-8A499078BA6BCF6C}","06/30/24 00:00:00",7
+141,"872923042","adventure-works\min0","zÓŒ",4,"Production Technician - WC20","1984-09-10","M","M","2020-01-24",0,1,20,-1,"{CC75C35D-1566-43FA-B2E9D1E508EFDCD1}","06/30/24 00:00:00",7
+142,"163347032","adventure-works\olinda0","zÓ—",4,"Production Technician - WC20","1980-04-04","S","F","2020-03-04",0,3,21,-1,"{6456CEC3-9B1E-4EBC-9FD8732B93363F65}","06/30/24 00:00:00",7
+143,"56772045","adventure-works\krishna0","zÓ”",4,"Production Technician - WC20","1981-09-05","S","M","2020-02-13",0,2,21,-1,"{42A506A5-0AC0-4148-B702BB7B804EF98C}","06/30/24 00:00:00",7
+144,"886023130","adventure-works\paul1","zÓ’",4,"Production Technician - WC20","2000-11-04","M","M","2019-01-17",0,6,23,-1,"{DC5BA622-B860-41EE-AF925FEB4779B589}","06/30/24 00:00:00",7
+145,"386315192","adventure-works\cynthia0","zÔÄ",3,"Production Supervisor - WC30","1991-08-18","S","F","2019-01-27",0,69,54,-1,"{F9E1DC46-0D03-4A8A-B6931A964BC13E6C}","06/30/24 00:00:00",7
+146,"160739235","adventure-works\jianshuo0","zÔ¨",4,"Production Technician - WC30","1999-06-25","S","M","2018-12-07",0,36,38,-1,"{6FFF136A-9664-4EB9-9243FAC76E21B9DD}","06/30/24 00:00:00",7
+147,"604664374","adventure-works\sandra0","zÔ¥",4,"Production Technician - WC30","1985-11-05","M","F","2018-12-26",0,37,38,-1,"{F69F3FF9-E1E0-4419-A6BFF705E1556160}","06/30/24 00:00:00",7
+148,"733022683","adventure-works\jason0","zÔº",4,"Production Technician - WC30","1998-12-07","S","M","2019-01-14",0,38,39,-1,"{C16C501D-942D-4EB0-B5C4EF8119FBEBA2}","06/30/24 00:00:00",7
+149,"764853868","adventure-works\andy0","zÔ¬",4,"Production Technician - WC30","1993-10-20","M","M","2019-01-31",0,39,39,-1,"{615A6BFE-3046-4037-9764238535F725BE}","06/30/24 00:00:00",7
+150,"878395493","adventure-works\michael5","zÔ∆",4,"Production Technician - WC30","1992-09-18","M","M","2019-02-26",0,35,37,-1,"{2B0876D4-8996-4E71-A613BE2E98E7ACCF}","06/30/24 00:00:00",7
+151,"993310268","adventure-works\rostislav0","zÔ ",4,"Production Technician - WC30","1987-09-13","M","M","2019-02-19",0,40,40,-1,"{00027A8C-C2F8-4A31-ABA88A203638B8F1}","06/30/24 00:00:00",7
+152,"319472946","adventure-works\yuhong0","zD",3,"Production Supervisor - WC20","1987-04-06","M","M","2019-02-01",0,41,40,-1,"{F1A684F4-02DB-4B22-89776D8D3A21100E}","06/30/24 00:00:00",7
+153,"568596888","adventure-works\hanying0","zE`",4,"Production Technician - WC20","1984-10-16","S","M","2018-12-16",0,15,27,-1,"{618B71BC-6E8C-492D-8862B9EFB7A4E06A}","06/30/24 00:00:00",7
+154,"97728960","adventure-works\raymond0","zE†",4,"Production Technician - WC20","1977-03-02","M","M","2018-12-23",0,10,25,-1,"{9F01E1FB-B893-40CC-9F5CAAF89F9B7AF5}","06/30/24 00:00:00",7
+155,"212801092","adventure-works\fadi0","zE‡",4,"Production Technician - WC20","1999-02-15","S","M","2019-01-04",0,16,28,-1,"{9923376F-26D0-4845-9D99CC3D696CAEB8}","06/30/24 00:00:00",7
+156,"322160340","adventure-works\lane0","zF",4,"Production Technician - WC20","1984-09-23","M","M","2019-01-11",0,11,25,-1,"{042427B8-3883-4A87-A6A3724EE1690F49}","06/30/24 00:00:00",7
+157,"812797414","adventure-works\linda1","zF0",4,"Production Technician - WC20","1987-10-05","S","F","2019-02-03",0,12,26,-1,"{F963F913-449E-4EBB-BFDAFC0C3010DB65}","06/30/24 00:00:00",7
+158,"300946911","adventure-works\shelley0","zFP",4,"Production Technician - WC20","1996-12-08","S","F","2019-03-07",0,14,27,-1,"{13942056-2930-4490-83CEAF2386D5A5E7}","06/30/24 00:00:00",7
+159,"404159499","adventure-works\terrence0","zFp",4,"Production Technician - WC20","1994-12-08","S","M","2019-02-16",0,13,26,-1,"{4DA76442-5EEF-41FB-AE1916C55714F9AD}","06/30/24 00:00:00",7
+160,"712885347","adventure-works\jeff0","zL",3,"Production Supervisor - WC45","1987-01-15","M","M","2019-01-21",0,74,57,-1,"{7C7D459E-1F49-427D-9BD5DE31880C85DC}","06/30/24 00:00:00",7
+161,"275962311","adventure-works\kirk0","zM`",4,"Production Technician - WC45","1995-02-06","S","M","2018-12-15",0,74,57,-1,"{08D25BAA-167B-499C-8B5131DCC856A8CF}","06/30/24 00:00:00",7
+162,"514829225","adventure-works\laura0","zM†",4,"Production Technician - WC45","1990-12-25","S","F","2019-01-03",0,75,57,-1,"{FCCD65BA-2702-4409-AE5675AF1710AC78}","06/30/24 00:00:00",7
+163,"377784364","adventure-works\alex0","zM‡",4,"Production Technician - WC45","2000-04-13","M","M","2019-02-08",0,77,58,-1,"{B96BC9C2-5A25-4A9B-887AC7C10E47B80C}","06/30/24 00:00:00",7
+164,"65848458","adventure-works\andrew1","zN",4,"Production Technician - WC45","1998-09-24","S","M","2019-03-06",0,73,56,-1,"{A2A2CF20-4E5C-45F7-A7BD1B94F0C3A43A}","06/30/24 00:00:00",7
+165,"539490372","adventure-works\chris0","zN0",4,"Production Technician - WC45","1998-12-16","M","M","2019-01-22",0,76,58,-1,"{300223F3-5587-4230-909BD9C4AFD6D683}","06/30/24 00:00:00",7
+166,"60114406","adventure-works\jack0","zT",3,"Production Supervisor - WC30","1993-06-22","S","M","2019-02-21",0,68,54,-1,"{69A47230-70EE-48FD-AC15C39F3712FF14}","06/30/24 00:00:00",7
+167,"498138869","adventure-works\david1","zU`",4,"Production Technician - WC30","1989-11-02","S","M","2018-12-02",0,25,32,-1,"{ED7EE92E-A9D0-4E3A-8DEE4B143E459F7E}","06/30/24 00:00:00",7
+168,"271438431","adventure-works\garrett0","zU†",4,"Production Technician - WC30","1994-08-25","S","M","2018-12-07",0,34,37,-1,"{A6F5F72F-AA03-41B7-8B6EB123BD360753}","06/30/24 00:00:00",7
+169,"351069889","adventure-works\susan1","zU‡",4,"Production Technician - WC30","1993-04-02","S","F","2018-12-14",0,31,35,-1,"{F73D75D5-B47B-46EE-AD117BF13DD6C55D}","06/30/24 00:00:00",7
+170,"476115505","adventure-works\george0","zV",4,"Production Technician - WC30","1987-04-16","M","M","2018-12-21",0,26,33,-1,"{01B119A2-2AF3-4775-818EB421FECB07A7}","06/30/24 00:00:00",7
+171,"746373306","adventure-works\david3","zV0",4,"Production Technician - WC30","1991-08-03","S","M","2019-01-02",0,32,36,-1,"{84C358D4-2493-452C-B7D6B212C893A009}","06/30/24 00:00:00",7
+172,"364818297","adventure-works\marc0","zVP",4,"Production Technician - WC30","1996-10-24","M","M","2019-01-16",0,22,31,-1,"{1F151ABC-DB4A-431A-8A5D15F46C5B8FFC}","06/30/24 00:00:00",7
+173,"87268837","adventure-works\eugene0","zVp",4,"Production Technician - WC30","1997-07-15","S","M","2019-01-21",0,33,36,-1,"{1BA1D374-18AE-48ED-938F6F5D2EEC4D4D}","06/30/24 00:00:00",7
+174,"585408256","adventure-works\benjamin0","zVà",4,"Production Technician - WC30","1996-01-05","S","M","2019-01-27",0,28,34,-1,"{F1A6F824-895B-4A0F-AF1B05FBA703E69F}","06/30/24 00:00:00",7
+175,"259388196","adventure-works\reed0","zVò",4,"Production Technician - WC30","1999-01-08","M","M","2019-02-02",0,23,31,-1,"{B3967C00-7014-4960-AF15B1A6D3094F6F}","06/30/24 00:00:00",7
+176,"860123571","adventure-works\david7","zV®",4,"Production Technician - WC30","1995-09-23","M","M","2019-02-14",0,29,34,-1,"{85AFB689-7EAB-41A8-B1549446195D5BDE}","06/30/24 00:00:00",7
+177,"551346974","adventure-works\russell1","zV∏",4,"Production Technician - WC30","1992-02-11","M","M","2019-02-21",0,24,32,-1,"{D54C7989-2675-4EF3-B392370A8D264B2B}","06/30/24 00:00:00",7
+178,"568626529","adventure-works\john3","zV»",4,"Production Technician - WC30","1992-03-24","S","M","2019-03-03",0,27,33,-1,"{96C7EAB1-6DEA-4C59-AFD8923F0E8DE1F6}","06/30/24 00:00:00",7
+179,"587567941","adventure-works\jan0","zVÿ",4,"Production Technician - WC30","1984-11-15","S","M","2019-03-05",0,30,35,-1,"{975F827D-BE71-4EB1-8DBFE6C451D1FAD5}","06/30/24 00:00:00",7
+180,"862951447","adventure-works\katie0","z\",3,"Production Supervisor - WC20","1994-11-18","S","F","2019-02-20",0,42,41,-1,"{5BE8B211-CBE5-45D8-84FD23F36A881473}","06/30/24 00:00:00",7
+181,"545337468","adventure-works\michael0","z]`",4,"Production Technician - WC20","1994-11-17","S","M","2018-12-09",0,20,30,-1,"{4FD6FE82-535A-4DD1-BEB1154A8B5E42F0}","06/30/24 00:00:00",7
+182,"368920189","adventure-works\nitin0","z]†",4,"Production Technician - WC20","1996-12-01","S","M","2018-12-28",0,21,30,-1,"{EBBC6787-3F2D-4F6B-9EA34DEF02EF382E}","06/30/24 00:00:00",7
+183,"969985265","adventure-works\barbara0","z]‡",4,"Production Technician - WC20","1989-07-02","M","F","2019-01-22",0,17,28,-1,"{045C9CBB-3448-4599-9FA96C7A9F82F832}","06/30/24 00:00:00",7
+184,"305522471","adventure-works\john2","z^",4,"Production Technician - WC20","1996-04-05","M","M","2019-02-09",0,18,29,-1,"{BAB69951-28AD-4BCA-B5AC032746D0CC6F}","06/30/24 00:00:00",7
+185,"621932914","adventure-works\stefen0","z^0",4,"Production Technician - WC20","1985-12-21","S","M","2019-02-28",0,19,29,-1,"{B9EEBF9F-F694-4BC2-98EC9B4FB0379EDF}","06/30/24 00:00:00",7
+186,"551834634","adventure-works\shane0","zd",3,"Production Supervisor - WC45","2000-05-24","S","M","2019-02-08",0,75,57,-1,"{2625C358-672A-4000-AD67B8CD3F318285}","06/30/24 00:00:00",7
+187,"713403643","adventure-works\yvonne0","ze`",4,"Production Technician - WC45","1999-04-15","M","F","2018-12-09",0,79,59,-1,"{83C6DABF-FD7D-4F5B-BB22EB7EEBB9A772}","06/30/24 00:00:00",7
+188,"435234965","adventure-works\douglas0","ze†",4,"Production Technician - WC45","1995-11-24","M","M","2018-12-27",0,80,60,-1,"{1AB0EDEB-7558-4734-84235A11B44DCA35}","06/30/24 00:00:00",7
+189,"187369436","adventure-works\janeth0","ze‡",4,"Production Technician - WC45","1982-07-24","S","F","2019-01-15",0,81,60,-1,"{8261B8CB-BC3F-4BCE-B36486035D870263}","06/30/24 00:00:00",7
+190,"456839592","adventure-works\robert0","zf",4,"Production Technician - WC45","1995-02-28","S","M","2019-02-02",0,82,61,-1,"{2203154E-5EBD-4ACA-99BED835A3309D03}","06/30/24 00:00:00",7
+191,"399658727","adventure-works\lionel0","zf0",4,"Production Technician - WC45","1998-03-14","S","M","2019-02-26",0,78,59,-1,"{231B1798-F67B-45C1-9688265180F93D28}","06/30/24 00:00:00",7
+192,"634335025","adventure-works\brenda0","zl",3,"Production Supervisor - WC40","1993-02-28","M","F","2019-03-05",0,71,55,-1,"{714D519B-375E-4C5A-8491C758D00CF95F}","06/30/24 00:00:00",7
+193,"761597760","adventure-works\alejandro0","zm`",4,"Production Technician - WC40","1998-12-05","S","M","2018-12-06",0,52,46,-1,"{8C7321D2-2C64-4902-9D648F5C1EB7F747}","06/30/24 00:00:00",7
+194,"295971920","adventure-works\fred0","zm†",4,"Production Technician - WC40","1999-06-25","S","M","2018-12-12",0,47,43,-1,"{45358AE8-0B0E-4C11-90BBDAC3EC0D5C82}","06/30/24 00:00:00",7
+195,"918737118","adventure-works\kevin1","zm‡",4,"Production Technician - WC40","1995-12-25","S","M","2018-12-17",0,58,49,-1,"{DC7E95FF-275E-41C2-8ED3686864F0540A}","06/30/24 00:00:00",7
+196,"370487086","adventure-works\shammi0","zn",4,"Production Technician - WC40","1990-10-04","M","M","2018-12-24",0,53,46,-1,"{9BEF0C94-7969-4905-9A42CE469C754800}","06/30/24 00:00:00",7
+197,"632092621","adventure-works\rajesh0","zn0",4,"Production Technician - WC40","1987-10-04","M","M","2018-12-31",0,48,44,-1,"{ACA7B40C-7AC0-4DAA-B4C71051D850D7D9}","06/30/24 00:00:00",7
+198,"19312190","adventure-works\lorraine0","znP",4,"Production Technician - WC40","1998-11-26","M","F","2019-01-04",0,49,44,-1,"{A63966B6-9AD6-40BC-AFD4A83745879F4D}","06/30/24 00:00:00",7
+199,"992874797","adventure-works\paula1","znp",4,"Production Technician - WC40","1997-02-10","M","F","2019-01-12",0,54,47,-1,"{5DD2BE46-204F-4AF3-91F55EF082F6D6A6}","06/30/24 00:00:00",7
+200,"749211824","adventure-works\frank0","znà",4,"Production Technician - WC40","1997-09-06","M","M","2019-01-17",0,56,48,-1,"{DD9AD278-ED17-40CF-8619BAF1BB9D1CF2}","06/30/24 00:00:00",7
+201,"746201340","adventure-works\brian0","znò",4,"Production Technician - WC40","1987-02-10","S","M","2019-01-29",0,55,47,-1,"{18D594A8-B4ED-43C0-9C436033FEAADF4E}","06/30/24 00:00:00",7
+202,"436757988","adventure-works\tawana0","zn®",4,"Production Technician - WC40","1999-11-10","S","M","2019-02-05",0,50,45,-1,"{BB4A3E50-232E-4212-9FAFE67429FEBC7D}","06/30/24 00:00:00",7
+203,"693168613","adventure-works\ken1","zn∏",4,"Production Technician - WC40","1991-05-28","M","M","2019-02-24",0,51,45,-1,"{699C00D8-C4AB-4CD2-A48F37CBCB5BFCCA}","06/30/24 00:00:00",7
+204,"440379437","adventure-works\gabe0","zn»",4,"Production Technician - WC40","1998-05-10","M","M","2019-03-08",0,57,48,-1,"{790C9A7C-264C-4D48-A9D3E2571A8011D8}","06/30/24 00:00:00",7
+205,"332349500","adventure-works\lori0","zt",3,"Production Supervisor - WC45","1990-07-18","S","F","2019-02-26",0,76,58,-1,"{23D436FC-08F7-4988-8B4D490AA4E8B7E7}","06/30/24 00:00:00",7
+206,"835460180","adventure-works\stuart0","zu`",4,"Production Technician - WC45","1972-09-13","S","M","2018-12-02",0,84,62,-1,"{4F361B4F-7920-4037-9A0A46D616F9B9C7}","06/30/24 00:00:00",7
+207,"687685941","adventure-works\greg0","zu†",4,"Production Technician - WC45","1980-10-18","S","M","2018-12-02",0,85,62,-1,"{A36B5D6B-72A5-47F8-9F6B5D922130E760}","06/30/24 00:00:00",7
+208,"199546871","adventure-works\scott0","zu‡",4,"Production Technician - WC45","1997-02-10","M","M","2019-01-08",0,86,63,-1,"{E35DA50A-BB51-4E08-8B8D87EF4650247A}","06/30/24 00:00:00",7
+209,"167554340","adventure-works\kathie0","zv",4,"Production Technician - WC45","2000-11-01","M","F","2019-01-27",0,87,63,-1,"{25FC84D7-E013-44B8-82CD63CD4723AF81}","06/30/24 00:00:00",7
+210,"20244403","adventure-works\belinda0","zv0",4,"Production Technician - WC45","1979-09-17","S","F","2019-02-20",0,83,61,-1,"{F714B5EC-CA7C-4E6E-A8122C5A119F4C30}","06/30/24 00:00:00",7
+211,"398223854","adventure-works\hazem0","{@",2,"Quality Assurance Manager","1987-10-26","S","M","2019-02-28",-1,80,60,-1,"{05C84608-F445-4F9D-BB5C0828C309C29D}","12/26/24 09:17:09",13
+212,"885055826","adventure-works\peng0","{V",3,"Quality Assurance Supervisor","1986-03-18","M","M","2018-12-09",-1,81,60,-1,"{E249D613-36C9-4544-9B6F6CE50E5E0DA5}","06/30/24 00:00:00",13
+213,"343861179","adventure-works\sootha0","{V∞",4,"Quality Assurance Technician","1976-12-05","M","M","2020-02-23",0,85,62,-1,"{A3DADF19-27F0-460A-9888CE6CAA9E3583}","06/30/24 00:00:00",13
+214,"131471224","adventure-works\andreas0","{V–",4,"Quality Assurance Technician","1999-03-28","M","M","2019-02-02",0,84,62,-1,"{F4DDD64F-DFFE-4DF3-AA17D6BEA1924818}","06/30/24 00:00:00",13
+215,"381772114","adventure-works\mark0","{V",4,"Quality Assurance Technician","1996-04-30","S","M","2019-01-15",0,83,61,-1,"{6B63EF27-2C55-4F4C-BE29FCE8B694DC4A}","06/30/24 00:00:00",13
+216,"403414852","adventure-works\sean0","{W",4,"Quality Assurance Technician","1986-03-06","S","M","2018-12-28",0,82,61,-1,"{34E128CF-D904-4327-80149DF0D5DE7D08}","06/30/24 00:00:00",13
+217,"345106466","adventure-works\zainal0","{Z",3,"Document Control Manager","1986-01-30","M","M","2019-01-04",0,77,58,-1,"{DC60EEED-9F9F-4435-86664DE4FAFDE9C3}","06/30/24 00:00:00",12
+218,"540688287","adventure-works\tengiz0","{Z∞",4,"Control Specialist","2000-04-28","S","M","2018-12-16",0,76,58,-1,"{C609B3B2-7969-410C-934C62C34B63C4EE}","06/30/24 00:00:00",12
+219,"242381745","adventure-works\sean1","{Z–",4,"Document Control Assistant","1997-03-12","S","M","2019-01-22",0,78,59,-1,"{F78657A9-83EF-4B4D-98093C4C6D1A7BB4}","06/30/24 00:00:00",12
+220,"260770918","adventure-works\karen0","{Z",4,"Document Control Assistant","1985-12-25","M","F","2019-02-09",0,79,59,-1,"{8A41ED23-7AE2-4C15-AA5D9496E721F848}","06/30/24 00:00:00",12
+221,"260805477","adventure-works\chris1","{[",4,"Control Specialist","1997-05-26","M","M","2019-03-06",0,75,57,-1,"{45C358FB-9C7F-4D36-8EC73D89E9FD07F4}","06/30/24 00:00:00",12
+222,"685233686","adventure-works\ascott0","{¿",2,"Master Scheduler","1978-09-17","S","M","2018-12-12",0,44,42,-1,"{13909262-4136-492F-BCA30B0E3773B03E}","12/26/24 09:17:09",8
+223,"981495526","adventure-works\sairaj0","{÷",3,"Scheduling Assistant","1997-12-22","M","M","2019-01-26",0,46,43,-1,"{4D36A720-CE32-4C47-866ADB7844449309}","06/30/24 00:00:00",8
+224,"621209647","adventure-works\william0","{⁄",3,"Scheduling Assistant","1991-11-06","M","M","2019-01-07",0,45,42,-1,"{1A68CD62-6FE9-4613-90D42CD178E4E54A}","06/30/24 00:00:00",8
+225,"470689086","adventure-works\alan0","{ﬁ",3,"Scheduling Assistant","1994-03-29","M","M","2019-02-13",0,47,43,-1,"{DE321854-B076-4D59-BB7B42152031B108}","06/30/24 00:00:00",8
+226,"368691270","adventure-works\brian1","{·",3,"Scheduling Assistant","1994-08-11","M","M","2019-03-03",0,48,44,-1,"{DFA02733-C26E-4E31-99D89167E4E5131D}","06/30/24 00:00:00",8
+227,"141165819","adventure-works\gary1","| ",2,"Facilities Manager","1981-02-18","M","M","2019-12-02",-1,86,63,-1,"{62F6EC59-5635-44F3-9CC12D8EEAF90A05}","06/30/24 00:00:00",14
+228,"553069203","adventure-works\christian0","|+",3,"Maintenance Supervisor","1986-01-18","M","M","2018-12-14",-1,92,66,-1,"{4611C7C5-90A0-407F-B05493BD51533609}","06/30/24 00:00:00",14
+229,"879334904","adventure-works\lori1","|+X",4,"Janitor","1980-07-31","M","F","2020-02-16",0,90,65,-1,"{929FE187-EE24-4F5F-AF2AF96324F09423}","06/30/24 00:00:00",14
+230,"28414965","adventure-works\stuart1","|+h",4,"Janitor","1981-12-17","M","M","2020-03-05",0,88,64,-1,"{CC2791E6-7629-49C5-922A81445AFDF033}","06/30/24 00:00:00",14
+231,"153479919","adventure-works\jo1","|+x",4,"Janitor","1964-04-24","M","F","2020-03-07",0,91,65,-1,"{39AF5CCA-9B52-41E5-B51072901D2578F6}","06/30/24 00:00:00",14
+232,"646304055","adventure-works\pat0","|+Ñ",4,"Janitor","1980-12-03","S","M","2020-01-27",0,89,64,-1,"{49238447-30EE-4009-993F0B6C756AB436}","06/30/24 00:00:00",14
+233,"552560652","adventure-works\magnus0","|-",3,"Facilities Administrative Assistant","1981-08-27","M","M","2019-12-21",0,87,63,-1,"{0A4BCC09-ACE5-4481-90678B9ED70ECA18}","06/30/24 00:00:00",14
+234,"184188301","adventure-works\laura1","Ñ",1,"Chief Financial Officer","1986-01-06","M","F","2019-01-31",-1,0,20,-1,"{D5E315A6-BD65-4D67-9D5F81EF5C4EF8A6}","06/30/24 00:00:00",16
+235,"535145551","adventure-works\paula0","Ö`",2,"Human Resources Manager","1986-02-11","M","F","2018-12-06",-1,54,47,-1,"{65028F15-4149-4DE5-B2039D7EC86BAF87}","06/30/24 00:00:00",9
+236,"476980013","adventure-works\grant0","Ök",3,"Human Resources Administrative Assistant","1986-04-16","S","M","2019-02-25",0,53,46,-1,"{4511ABBA-7F34-400E-907BA663C20E1A41}","06/30/24 00:00:00",9
+237,"416679555","adventure-works\hao0","Öm",3,"Human Resources Administrative Assistant","1987-04-17","S","M","2019-02-06",0,52,46,-1,"{FD53C4C8-B34E-460F-9EE5747B07FE98B3}","06/30/24 00:00:00",9
+238,"264306399","adventure-works\vidur0","Öo",3,"Recruiter","1994-08-01","S","M","2019-01-01",0,50,45,-1,"{47E76B59-B137-4572-AD556B3E68C13BD3}","06/30/24 00:00:00",9
+239,"619308550","adventure-works\mindy0","ÖpÄ",3,"Benefits Specialist","1994-11-20","M","F","2018-12-25",0,51,45,-1,"{834D7AB6-06E6-4944-B42F028CD4BD388E}","06/30/24 00:00:00",9
+240,"332040978","adventure-works\willis0","ÖqÄ",3,"Recruiter","1988-07-18","S","M","2018-12-13",0,49,44,-1,"{A1D86ECC-EA17-4B1B-8369F1D07AB0A469}","06/30/24 00:00:00",9
+241,"30845","adventure-works\david6","Ö†",2,"Accounts Manager","1993-07-08","M","M","2019-01-30",-1,57,48,-1,"{2DC9D534-F5D1-4A14-82820A2A0EB6FD4D}","06/30/24 00:00:00",10
+242,"363923697","adventure-works\deborah0","Ö´",3,"Accounts Receivable Specialist","1986-03-06","M","F","2018-12-18",0,60,50,-1,"{09F75454-028C-46CA-BC080147BD0220D7}","06/30/24 00:00:00",10
+243,"60517918","adventure-works\candy0","Ö≠",3,"Accounts Receivable Specialist","1986-02-23","S","F","2019-01-06",0,61,50,-1,"{9E9F713B-707C-4F7E-9504DE188052A045}","06/30/24 00:00:00",10
+244,"931190412","adventure-works\bryan1","ÖØ",3,"Accounts Receivable Specialist","1994-09-20","S","M","2019-01-24",0,62,51,-1,"{CB3E71EC-A381-4716-87DFD3841AB9795A}","06/30/24 00:00:00",10
+245,"363910111","adventure-works\barbara1","Ö∞Ä",3,"Accountant","1986-01-04","M","F","2019-02-18",-1,58,49,-1,"{3FFBA84E-8E97-4649-A5E1859649D83AAE}","06/30/24 00:00:00",10
+246,"663843431","adventure-works\dragan0","Ö±Ä",3,"Accounts Payable Specialist","1987-02-14","M","M","2019-02-11",0,63,51,-1,"{51C54D34-064B-44F7-A6B17702BD491980}","06/30/24 00:00:00",10
+247,"519756660","adventure-works\janet0","Ö≤Ä",3,"Accounts Payable Specialist","1989-03-09","M","F","2019-03-01",0,64,52,-1,"{0C641D77-8675-493F-99478C65136559CD}","06/30/24 00:00:00",10
+248,"480951955","adventure-works\mike0","Ö≥Ä",3,"Accountant","1989-07-01","S","M","2019-03-08",-1,59,49,-1,"{AC35337D-7C75-4DEE-BB116564F257FE18}","06/30/24 00:00:00",10
+249,"121491555","adventure-works\wendy0","Ö‡",2,"Finance Manager","1994-10-11","S","F","2018-12-25",-1,55,47,-1,"{8F410408-4AA8-4D67-886D530BFE4EBE3B}","06/30/24 00:00:00",10
+250,"895209680","adventure-works\sheela0","ÖÎ",3,"Purchasing Manager","1988-02-10","S","F","2021-02-25",-1,49,44,-1,"{7D6B0155-0191-4599-8394378EBDE63C9A}","06/30/24 00:00:00",5
+251,"603686790","adventure-works\mikael0","ÖÎX",4,"Buyer","1994-08-17","S","M","2019-02-10",0,59,49,-1,"{D0FD55FF-42FA-491E-8B3BAB3316018909}","06/30/24 00:00:00",5
+252,"792847334","adventure-works\arvind0","ÖÎh",4,"Buyer","1984-08-21","M","M","2019-02-28",0,60,50,-1,"{51DE26F0-6ED9-4A70-B68988EB882674B6}","06/30/24 00:00:00",5
+253,"407505660","adventure-works\linda2","ÖÎx",4,"Buyer","1980-11-30","M","F","2019-12-17",0,56,48,-1,"{ED06F9F4-2123-4C44-89D7E43E1E1ABC2F}","06/30/24 00:00:00",5
+254,"482810518","adventure-works\fukiko0","ÖÎÑ",4,"Buyer","1980-11-24","M","M","2020-01-04",0,57,48,-1,"{36CD6636-C657-4FC7-9BFACC1BFA9102A2}","06/30/24 00:00:00",5
+255,"466142721","adventure-works\gordon0","ÖÎå",4,"Buyer","1976-11-29","M","M","2020-01-11",0,52,46,-1,"{2CB2D5C3-C437-49B1-9FFDFAA096F6126F}","06/30/24 00:00:00",5
+256,"367453993","adventure-works\frank2","ÖÎî",4,"Buyer","1962-05-12","M","M","2020-01-23",0,58,49,-1,"{0423D8D0-1B14-4718-8C1785E2F98D222F}","06/30/24 00:00:00",5
+257,"381073001","adventure-works\eric2","ÖÎú",4,"Buyer","1982-09-17","S","M","2020-01-27",0,54,47,-1,"{A28AB377-06F5-417A-A5E259F459088699}","06/30/24 00:00:00",5
+258,"785853949","adventure-works\erin0","ÖÎ¢",4,"Buyer","1981-01-04","S","F","2020-01-31",0,53,46,-1,"{B60712A9-50A5-4296-B89269C4701834B0}","06/30/24 00:00:00",5
+259,"20269531","adventure-works\ben0","ÖÎ¶",4,"Buyer","1983-06-03","M","M","2020-03-09",0,55,47,-1,"{B9641CAE-765C-4662-B760C167A1F2B8B5}","06/30/24 00:00:00",5
+260,"437296311","adventure-works\annette0","ÖÎ™",4,"Purchasing Assistant","1988-01-29","M","F","2020-12-06",0,50,45,-1,"{9E03395F-4D5D-4A53-880E174BD8C1DB59}","06/30/24 00:00:00",5
+261,"280633567","adventure-works\reinout0","ÖÎÆ",4,"Purchasing Assistant","1988-01-17","M","M","2020-12-25",0,51,45,-1,"{9825EB00-8E36-4506-93A26DDCDC0B13C3}","06/30/24 00:00:00",5
+262,"231203233","adventure-works\david5","Ü",2,"Assistant to the Chief Financial Officer","1974-06-21","S","M","2019-01-12",0,56,48,-1,"{BE81FD77-428C-449F-AB7948B1CDF53D6A}","06/30/24 00:00:00",10
+263,"441044382","adventure-works\jean0","å",1,"Information Services Manager","1985-12-13","S","F","2018-12-11",-1,65,52,-1,"{794A0B1F-C46A-401C-984D008996FC7092}","06/30/24 00:00:00",11
+264,"858323870","adventure-works\stephanie0","ç`",2,"Network Manager","1994-03-25","S","F","2019-02-04",-1,68,54,-1,"{221CBB7B-8BAE-452B-A16FA67EBB3873C8}","06/30/24 00:00:00",11
+265,"749389530","adventure-works\ashvini0","çk",3,"Network Administrator","1987-03-27","S","M","2018-12-04",0,70,55,-1,"{2E680C1C-7C02-4343-96266F97273414C0}","06/30/24 00:00:00",11
+266,"672243793","adventure-works\peter1","çm",3,"Network Administrator","1990-05-28","S","M","2019-02-23",0,69,54,-1,"{86601E6A-6955-40FC-BB4A1053A843CE99}","06/30/24 00:00:00",11
+267,"58317344","adventure-works\karen1","ç†",2,"Application Specialist","1988-05-19","S","F","2019-02-16",-1,74,57,-1,"{45C3D0F5-3332-419D-AD40A98996BB5531}","06/30/24 00:00:00",11
+268,"314747499","adventure-works\ramesh0","ç‡",2,"Application Specialist","1998-03-13","S","M","2019-02-03",-1,73,56,-1,"{BE190269-4003-4D7F-809E7B3FDC235DA8}","06/30/24 00:00:00",11
+269,"671089628","adventure-works\dan0","é",2,"Application Specialist","1997-05-26","M","M","2019-01-11",-1,72,56,-1,"{71B0D010-5AC5-4E91-8EFAC311C1372A73}","06/30/24 00:00:00",11
+270,"643805155","adventure-works\fran√ßois0","é0",2,"Database Administrator","1985-05-17","S","M","2019-01-17",-1,67,53,-1,"{0C7F025D-8D56-48EF-86C0F09DB63D0182}","06/30/24 00:00:00",11
+271,"929666391","adventure-works\dan1","éP",2,"Database Administrator","1986-01-06","M","M","2019-01-22",-1,66,53,-1,"{2474E1A9-902D-466C-B0B26DCAC927F753}","06/30/24 00:00:00",11
+272,"525932996","adventure-works\janaina0","ép",2,"Application Specialist","1995-01-30","M","F","2018-12-23",-1,71,55,-1,"{241535C7-7A31-4A6A-9E0DA83C30C2EDDA}","06/30/24 00:00:00",11
+273,"112432117","adventure-works\brian3","î",1,"Vice President of Sales","1987-06-06","S","M","2021-02-15",-1,10,25,-1,"{F3EC557C-8B41-4EE6-BB0CE3B93AFF81E5}","06/30/24 00:00:00",3
+274,"502097814","adventure-works\stephen0","ï`",2,"North American Sales Manager","1961-10-17","M","M","2021-01-04",-1,14,27,-1,"{86D5FA9E-4BC0-48C8-91DC1EC467418D11}","06/30/24 00:00:00",3
+275,"841560125","adventure-works\michael9","ïk",3,"Sales Representative","1978-12-25","S","M","2021-05-31",-1,38,39,-1,"{E19F8DE2-0F40-418C-84A2DB48B98DC6A2}","06/30/24 00:00:00",3
+276,"191644724","adventure-works\linda3","ïm",3,"Sales Representative","1990-02-27","M","F","2021-05-31",-1,27,33,-1,"{4509F387-D73A-43DC-A502B1C27AA1DC9E}","06/30/24 00:00:00",3
+277,"615389812","adventure-works\jillian0","ïo",3,"Sales Representative","1972-08-29","S","F","2021-05-31",-1,24,32,-1,"{A011C97B-081C-4739-996FC1CAC4532F8D}","06/30/24 00:00:00",3
+278,"234474252","adventure-works\garrett1","ïpÄ",3,"Sales Representative","1985-02-04","M","M","2021-05-31",-1,33,36,-1,"{50EECC16-0D0D-43A9-9649016C06DE8D78}","06/30/24 00:00:00",3
+279,"716374314","adventure-works\tsvi0","ïqÄ",3,"Sales Representative","1984-01-18","M","M","2021-05-31",-1,29,34,-1,"{BB510FCE-0105-4306-B5916450D9EBF401}","06/30/24 00:00:00",3
+280,"61161660","adventure-works\pamela0","ïrÄ",3,"Sales Representative","1984-12-06","S","F","2021-05-31",-1,22,31,-1,"{7627B9D6-0707-4706-9AD90D37506B08AE}","06/30/24 00:00:00",3
+281,"139397894","adventure-works\shu0","ïsÄ",3,"Sales Representative","1978-03-09","M","M","2021-05-31",-1,26,33,-1,"{4103C891-37E8-4DFC-AEACB55E2BC1BE1C}","06/30/24 00:00:00",3
+282,"399771412","adventure-works\jos√©1","ït@",3,"Sales Representative","1973-12-11","M","M","2021-05-31",-1,31,35,-1,"{FD3992FB-3067-451D-A09D73BD53C0FECA}","06/30/24 00:00:00",3
+283,"987554265","adventure-works\david8","ït¿",3,"Sales Representative","1984-02-11","S","M","2021-05-31",-1,23,31,-1,"{1E8F9E91-508F-4D49-ACD2775C836030ED}","06/30/24 00:00:00",3
+284,"90836195","adventure-works\tete0","ïu@",3,"Sales Representative","1988-01-05","M","M","2022-09-30",-1,39,39,-1,"{0C67CE00-DE78-4712-908F06939A2C58D5}","06/30/24 00:00:00",3
+285,"481044938","adventure-works\syed0","ï†",2,"Pacific Sales Manager","1985-01-11","M","M","2023-03-14",-1,20,30,-1,"{86F292DB-B73C-429D-9912800994D809FB}","06/30/24 00:00:00",3
+286,"758596752","adventure-works\lynn0","ï´",3,"Sales Representative","1987-02-14","S","F","2023-05-30",-1,36,38,-1,"{4A9A8407-A680-4A6B-8D03511CB58F9A8A}","06/30/24 00:00:00",3
+287,"982310417","adventure-works\amy0","ï‡",2,"European Sales Manager","1967-09-20","M","F","2022-04-16",-1,21,30,-1,"{66D66445-EE78-4676-9E660E22D6109A92}","06/30/24 00:00:00",3
+288,"954276278","adventure-works\rachel0","ïÎ",3,"Sales Representative","1985-07-09","S","F","2023-05-30",-1,35,37,-1,"{B9BF7741-E0CA-4F37-ACDEA4F78C6D03E9}","06/30/24 00:00:00",3
+289,"668991357","adventure-works\jae0","ïÌ",3,"Sales Representative","1978-03-17","M","F","2022-05-30",-1,37,38,-1,"{723A5921-D8A1-4659-9BC413C4CF7C9C91}","06/30/24 00:00:00",3
+290,"134219713","adventure-works\ranjit0","ïÔ",3,"Sales Representative","1985-09-30","S","M","2022-05-30",-1,34,37,-1,"{604213F9-DD0F-43B4-BDD2C96E93D3F4BF}","06/30/24 00:00:00",3
