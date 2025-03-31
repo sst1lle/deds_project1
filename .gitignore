@@ -1,0 +1,22 @@
+# Virtuele omgeving
+.venv/
+
+# PDM cache
+__pypackages__/
+
+# Python standaard uitsluitingen
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.venv
+*.egg-info/
+*.egg
+
+# Logbestanden
+*.log
+
+# IDE-specifieke bestanden (bijvoorbeeld VS Code)
+.vscode/
+.idea/
