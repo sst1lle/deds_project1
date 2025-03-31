@@ -129,7 +129,7 @@ CREATE TABLE Production_Product (
     DiscontinuedDate DATE,
     rowguid INT,
     ModifiedDate DATE,
-    MergedCategoryID INT,
+    ProductCategoryID INT,
     Discontinued VARCHAR(50),
     QuantityPerUnit VARCHAR(50),
     quantity VARCHAR(50), 	
@@ -137,7 +137,7 @@ CREATE TABLE Production_Product (
     UnitsInStock VARCHAR(50),
     UnitsOnOrder VARCHAR(50),
     SupplierID INT,
-    FOREIGN KEY (MergedCategoryID) REFERENCES Production_ProductCategory(MergedCategoryID),
+    FOREIGN KEY (ProductCategoryID) REFERENCES Production_ProductCategory(MergedCategoryID),
     FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
 );
 CREATE TABLE Purchasing_Vendor (
