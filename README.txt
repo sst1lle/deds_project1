@@ -1,4 +1,5 @@
-# deds_project1
+```markdown
+# DEDS Project 1
 
 Dit project is een sjabloon voor een PDM-pakket, ontworpen om gegevens te beheren en te analyseren met behulp van de meegeleverde databases.
 
@@ -15,18 +16,31 @@ Dit project is een sjabloon voor een PDM-pakket, ontworpen om gegevens te behere
 
 ## Installatie
 
-## 1. Clone de repository
+### 1. Clone de repository
 
-## 2. Installeer de afhankelijkheden:
-'pip install pdm' of 'pdm install'
-dan: 
-'pdm init'
+```bash
+git clone <repository-url>
+cd deds_project1
+```
 
-## packages teoveogen voor datamanipulatie:
-'pip install pandas' 
-en
-'pip install pyodbc'
+### 2. Installeer de afhankelijkheden
 
+```bash
+pip install pdm  # of pdm install
+pdm init
+```
 
+### 3. Installeer benodigde packages voor datamanipulatie
 
- 
+```bash
+pip install pandas pyodbc
+```
+
+## Gebruik
+
+Start het Jupyter Notebook om met de analyse te beginnen:
+
+```bash
+jupyter notebook sourceDataModel.ipynb
+```
+
