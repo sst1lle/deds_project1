@@ -2,48 +2,41 @@ CREATE TABLE HumanResources_Department (
     DepartmentID INT PRIMARY KEY,
     Name VARCHAR(100),
     GroupName VARCHAR(100),
-    dept_head_id INT,
     ModifiedDate DATE,
-   
+    Source VARCHAR(50)
 );
+
 CREATE TABLE Person_Person (
-    BusnissEntityID INT PRIMARY KEY,
+    MergedBusinessEntityID INT PRIMARY KEY,
+    BusinessEntityID INT,
     PersonType VARCHAR(50),
     NameStyle VARCHAR(100),
     Title VARCHAR(255),
-    FullName VARCHAR(100),
+    LastName VARCHAR(100),
     Suffix VARCHAR(50),
     EmailPromotion VARCHAR(50),
-    rowguide INT,
+    rowguid VARCHAR(100),
     PhoneNumber VARCHAR(30),
-    Fax VARCHAR(50),
-    ModifiedDate DATE
+    ModifiedDate DATE,
+    Source VARCHAR(50)
 );
 
-CREATE TABLE HumanResources_Employee (
-    BusinessEntityID INT PRIMARY KEY,
-    NationalIDNumber INT,
-    LoginID INT,
-    OrganizationNode VARCHAR(50),
-    OrganizationLevel VARCHAR(50),
+
+
+    CREATE TABLE HumanResources_Employee (
+    MergedBusinessEntityID INT PRIMARY KEY,
+    BusinessEntityID INT,
     JobTitle VARCHAR(255),
     BirthDate DATE,
-    MaritalStatus VARCHAR(50),
-    Gender VARCHAR(50),
     HireDate DATE,
-    SalariedFlag BIT,
-    VacationHours SMALLINT,
-    SickLeaveHours SMALLINT,
-    CurrentFlag BIT,
-    rowguid INT,
-    status BIT,
-    salary DECIMAL(10,2),
+    Gender VARCHAR(50),
+    Salary DECIMAL(10,2),
     DepartmentID INT,
-    Manager_id INT,
-    ModifiedDate DATE,
+    ManagerID INT,
+    Source VARCHAR(50),
     FOREIGN KEY (DepartmentID) REFERENCES HumanResources_Department(DepartmentID),
-    FOREIGN KEY (Manager_id) REFERENCES HumanResources_Employee(BusinessEntityID),
-    FOREIGN KEY (BusinessEntityID) REFERENCES Person_Person(BusnissEntityID)
+    FOREIGN KEY (ManagerID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (MergedBusinessEntityID) REFERENCES Person_Person(MergedBusinessEntityID)
 );
 
 
@@ -53,16 +46,10 @@ CREATE TABLE Person_Address (
     AddressLine1 VARCHAR(100),
     AddressLine2 VARCHAR(100),
     City VARCHAR(50),
-    StateProvence VARCHAR(50),
-    StateCapital VARCHAR(50),
+    StateProvinceID VARCHAR(50),
     PostalCode VARCHAR(20),
-    SpacialLocation VARCHAR(50),
-    Rowguide INT,
-    Country VARCHAR(50),
-    Region VARCHAR(50),
-    ModifiedDate DATE,
-    BusnissEntityID INT,
-    FOREIGN KEY (BusnissEntityID) REFERENCES Person_Person(BusnissEntityID)
+    BusinessEntityID INT,
+    FOREIGN KEY (BusinessEntityID) REFERENCES Person_Person(MergedBusinessEntityID)
 );
 CREATE TABLE Production_ProductCategory (
     MergedCategoryID INT PRIMARY KEY,
@@ -75,14 +62,8 @@ CREATE TABLE Production_ProductCategory (
 );
 
 CREATE TABLE Shippers (
-    ShipersID INT PRIMARY KEY,
+    ShippersID INT PRIMARY KEY,
     CompanyName VARCHAR(100),
-    ShipName VARCHAR(100),
-    ShipAddress VARCHAR(50),
-    ShipCountry VARCHAR(50),
-    ShipPostalCode VARCHAR(20),
-    ShipRegion VARCHAR(50),
-    ShipCity VARCHAR(50),
     Phone VARCHAR(50)
 );
 
@@ -151,6 +132,25 @@ CREATE TABLE Purchasing_Vendor (
     ModifiedDate DATE
 );
 
+Rows: 4012
+  PurchaseOrderID RevisionNumber Status EmployeeID VendorID ShipMethodID  \
+0               1              4      4        258     1580            3   
+1               2              4      1        254     1496            5   
+2               3              4      4        257     1494            2   
+3               4              4      3        261     1650            5   
+4               5              4      4        251     1654            4   
+
+           OrderDate           ShipDate  SubTotal    TaxAmt   Freight  \
+0  04/16/21 00:00:00  04/25/21 00:00:00    201.04   16.0832     5.026   
+1  04/16/21 00:00:00  04/25/21 00:00:00  272.1015   21.7681    6.8025   
+2  04/16/21 00:00:00  04/25/21 00:00:00    8847.3   707.784  221.1825   
+3  04/16/21 00:00:00  04/25/21 00:00:00  171.0765   13.6861    4.2769   
+4  04/30/21 00:00:00  05/09/21 00:00:00   20397.3  1631.784  509.9325   
+
+     TotalDue       ModifiedDate  
+0    222.1492  04/25/21 00:00:00  
+1    300.6721  04/25/21 00:00:00  
+
 CREATE TABLE Purchasing_PurchaseOrderHeader (
     PurchaseOrderID INT PRIMARY KEY,
     RevisionNumber VARCHAR(30),
@@ -165,9 +165,9 @@ CREATE TABLE Purchasing_PurchaseOrderHeader (
     Freight VARCHAR(50),
     TotalDue VARCHAR(50),
     ModifiedDate DATE,
-    FOREIGN KEY (EmployeeID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (EmployeeID) REFERENCES HumanResources_Employee(MergedBusinessEntityID),
     FOREIGN KEY (VendorID) REFERENCES Purchasing_Vendor(BusinessEntityID),
-    FOREIGN KEY (ShipMethodID) REFERENCES Shippers(ShipersID)
+    FOREIGN KEY (ShipMethodID) REFERENCES Shippers(ShippersID)
 );
 
 
@@ -206,73 +206,55 @@ CREATE TABLE Sales_Store (
     SalesPersonID INT,
     rowguid INT,
     ModifiedDate DATE,
-    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(BusinessEntityID)
+    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(MergedBusinessEntityID)
 );
 
 CREATE TABLE Sales_Customer (
-    CustomerID INT PRIMARY KEY,
+    MergedCustomerID INT PRIMARY KEY AUTO_INCREMENT,
+    CustomerID VARCHAR(50),  -- Kan zowel tekst als getallen bevatten
     PersonID INT,
     StoreID INT,
     TerritoryID INT,
     CompanyName VARCHAR(100),
     AccountNumber VARCHAR(30),
-    rowguid INT,
+    rowguid VARCHAR(50),
     ModifiedDate DATE,
-    FOREIGN KEY (PersonID) REFERENCES Person_Person(BusnissEntityID),
-    FOREIGN KEY (StoreID) REFERENCES Sales_Store(BusinessEntityID),
-    FOREIGN KEY (TerritoryID) REFERENCES Sales_SalesTerritory(TerritoryID)
+    Source VARCHAR(50),  -- Geeft aan uit welke database de klant komt
+    FOREIGN KEY (PersonID) REFERENCES Person_Person(MergedBusinessEntityID),
+=    FOREIGN KEY (TerritoryID) REFERENCES Sales_SalesTerritory(TerritoryID) 
 );
+
 CREATE TABLE Sales_SalesOrderHeader (
     SalesOrderID INT PRIMARY KEY,
     RevisionNumber VARCHAR(30),
     OrderDate DATE,
     DueDate DATE,
     ShipDate DATE,
-    Status BIT,
-    OnlineOrderFlag BIT,
-    SalesOrderNumber VARCHAR(30),
-    PurchaseOrderNumber VARCHAR(30),
-    AccountNumber VARCHAR(30),
     CustomerID INT,
     SalesPersonID INT,
     TerritoryID INT,
-    BillToAddressID INT,
-    ShipToAddressID INT,
-    ShipMethodID INT,
-    CreditCardID INT,
-    CreditCardApprovalCode VARCHAR(20),
-    CurrencyRateID INT,
     SubTotal VARCHAR(50),
-    TaxAmt VARCHAR(50),
-    Freight VARCHAR(50),
-    TotalDue VARCHAR(50),
-    Comment VARCHAR(50),
-    rowguid INT,
-    ModifiedDate DATE,
     ShipVia VARCHAR(50),
+    ShipCountry VARCHAR(50),
+    ShipRegion VARCHAR(50),
+    ShipCity VARCHAR(50),
     FOREIGN KEY (CustomerID) REFERENCES Sales_Customer(CustomerID),
-    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(MergedBusinessEntityID),
     FOREIGN KEY (TerritoryID) REFERENCES Sales_SalesTerritory(TerritoryID),
-    FOREIGN KEY (BillToAddressID) REFERENCES Person_Address(AddressID),
-    FOREIGN KEY (ShipToAddressID) REFERENCES Person_Address(AddressID),
-    FOREIGN KEY (ShipMethodID) REFERENCES Shippers(ShipersID)
+    FOREIGN KEY (ShipVia) REFERENCES Shippers(ShippersID)
 );
 
 CREATE TABLE Sales_SalesOrderDetail (
-    SalesOrderDetailID INT PRIMARY KEY,
-    SalesOrderID INT,
-    CarrierTrackingNumber VARCHAR(30),
+    SalesOrderID INT ,
+    SalesOrderDetailID INT ,
     OrderQty VARCHAR(50),
-    MergedID INT,
-    SpecialOfferID INT,
+    ProductID INT,
     UnitPrice VARCHAR(50),
     UnitPriceDiscount VARCHAR(50),
     LineTotal VARCHAR(100),
-    line_id INT,
-    rowguid INT,
-    ModifiedDate DATE,
+    PRIMARY KEY (SalesOrderID , SalesOrderDetailID),
     FOREIGN KEY (SalesOrderID) REFERENCES Sales_SalesOrderHeader(SalesOrderID),
-    FOREIGN KEY (MergedID) REFERENCES Production_Product(MergedID)
+    FOREIGN KEY (ProductID) REFERENCES Production_Product(MergedID)
 );
 
 CREATE TABLE Region (
@@ -293,7 +275,7 @@ CREATE TABLE EmployeeTerritories (
     BusinessEntityID INT,
     TerritoryID INT,
     PRIMARY KEY (BusinessEntityID, TerritoryID),
-    FOREIGN KEY (BusinessEntityID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (BusinessEntityID) REFERENCES HumanResources_Employee(MergedBusinessEntityID),
     FOREIGN KEY (TerritoryID) REFERENCES Territories(TerritoryID)
 );
 
@@ -303,5 +285,5 @@ CREATE TABLE Bonus (
     bonus_date DATE,
     bonus_amount DECIMAL(10,2),
     PRIMARY KEY (emp_id, bonus_date),
-    FOREIGN KEY (emp_id) REFERENCES HumanResources_Employee(BusinessEntityID)
+    FOREIGN KEY (emp_id) REFERENCES HumanResources_Employee(MergedBusinessEntityID)
 );
