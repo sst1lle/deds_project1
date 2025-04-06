@@ -1,0 +1,175 @@
+EXEC sp_MSforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT ALL"
+
+
+
+
+
+CREATE TABLE Production_ProductCategory (
+    ProductCategoryID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Source VARCHAR(50)
+);
+
+
+CREATE TABLE Shippers (
+    ShipperID INT PRIMARY KEY,
+    CompanyName VARCHAR(100),
+);
+
+CREATE TABLE Suppliers (
+    SupplierID INT PRIMARY KEY,
+    CompanyName VARCHAR(100),
+    City VARCHAR(100),
+    Country VARCHAR(100),
+    Region VARCHAR(100),
+);
+
+CREATE TABLE Purchasing_Vendor (
+    BusinessEntityID INT PRIMARY KEY,
+    Name VARCHAR(255)
+);
+CREATE TABLE Sales_SalesTerritory (
+    TerritoryID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Region VARCHAR(100),
+    Group1 VARCHAR(100),
+    SalesYTD DECIMAL(10,2),
+    SalesLastYear DECIMAL(10,2),
+);
+CREATE TABLE Person_Person (
+    BusinessEntityID INT PRIMARY KEY,
+    Title VARCHAR(50),
+    LastName VARCHAR(255),
+    Source VARCHAR(50)
+);
+
+CREATE TABLE Person_Address (
+    AddressID INT PRIMARY KEY,
+    City VARCHAR(100),
+    BusinessEntityID INT,
+    FOREIGN KEY (BusinessEntityID) REFERENCES Person_Person(BusinessEntityID)
+);
+CREATE TABLE HumanResources_Department (
+    DepartmentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    GroupName VARCHAR(100),
+    Source VARCHAR(50)
+);
+CREATE TABLE Region (
+    RegionID INT PRIMARY KEY,
+    RegionDescription VARCHAR(255)
+);
+CREATE TABLE Territories (
+    TerritoryID INT PRIMARY KEY,
+    TerritoryDescription VARCHAR(255),
+    RegionID INT,
+    FOREIGN KEY (RegionID) REFERENCES Region(RegionID)
+);
+
+CREATE TABLE Production_Product (
+    ProductID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    StandardCost DECIMAL(10,2),
+    ProductCategoryID INT,
+    QuantityPerUnit VARCHAR(50),
+    DaysToManufacture INT,
+    ProductLine VARCHAR(30),
+    ListPrice DECIMAL(10,2),
+    UnitsInStock INT,
+    UnitsOnOrder INT,
+    SellStartDate DATE,
+    SellEndDate DATE,
+    DiscontiuedDate DATE,
+    SupplierID INT,
+    FOREIGN KEY (ProductCategoryID) REFERENCES Production_ProductCategory(ProductCategoryID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+CREATE TABLE HumanResources_Employee (
+    BusinessEntityID INT PRIMARY KEY,
+    JobTitle VARCHAR(100),
+    Salary DECIMAL(10,2),
+    DepartmentID INT,
+    ManagerID INT,
+    Source VARCHAR(50),
+    FOREIGN KEY (DepartmentID) REFERENCES HumanResources_Department(DepartmentID),
+    FOREIGN KEY (ManagerID) REFERENCES HumanResources_Employee(BusinessEntityID)
+);
+CREATE TABLE Sales_Store (
+    BusinessEntityID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    SalesPersonID INT,
+    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(BusinessEntityID)
+);
+CREATE TABLE EmployeeTerritories (
+    EmployeeID INT,
+    TerritoryID INT,
+    PRIMARY KEY (EmployeeID, TerritoryID),
+    FOREIGN KEY (EmployeeID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (TerritoryID) REFERENCES Territories(TerritoryID)
+);
+CREATE TABLE Sales_Customer (
+    CustomerID INT PRIMARY KEY,
+    SalesPersonID INT,
+    TerritoryID INT,
+    CompanyName VARCHAR(255),
+    AccountNumber VARCHAR(50),
+    Source VARCHAR(50),
+    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (TerritoryID) REFERENCES Sales_SalesTerritory(TerritoryID)
+);
+
+CREATE TABLE Fact_Sales_Order (
+    SalesOrderID INT,
+    SalesOrderDetailID INT,
+    OrderQty INT,
+    OrderDate DATE,
+    ProductID INT,
+    CustomerID INT,
+    UnitPrice DECIMAL(10,2),
+    UnitPriceDiscount DECIMAL(10,2),
+    LineTotal DECIMAL(15,2),
+    LineTotalDiscounted DECIMAL(15,2),
+    SalesPersonID INT,
+    SubTotal DECIMAL(15,2),
+    TotalDue DECIMAL(15,2),
+    ShipVia INT,
+    Source VARCHAR(30),
+    PRIMARY KEY (SalesOrderID, SalesOrderDetailID),
+    FOREIGN KEY (ProductID) REFERENCES  Production_Product(ProductID),
+    FOREIGN KEY (CustomerID) REFERENCES Sales_Customer(CustomerID),
+    FOREIGN KEY (SalesPersonID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (ShipVia) REFERENCES Shippers(ShipperID)
+);
+CREATE TABLE Fact_Purchase_Order (
+    PurchaseOrderID INT,
+    PurchaseOrderDetailID INT,
+    PurchaseDate DATE,
+    ShipDate DATE,
+    EmployeeID INT,
+    ProductID INT,
+    VendorID INT,
+    OrderQty INT,
+    UnitPrice DECIMAL(10,2),
+    ReceivedQty INT,
+    RejectedQty INT,
+    StockedQty INT,
+    SubTotal DECIMAL(15,2),
+    TotalDue DECIMAL(15,2),
+    Source VARCHAR(30),
+    PRIMARY KEY (PurchaseOrderID,PurchaseOrderDetailID),
+    FOREIGN KEY (EmployeeID) REFERENCES HumanResources_Employee(BusinessEntityID),
+    FOREIGN KEY (ProductID) REFERENCES Production_Product(ProductID),
+    FOREIGN KEY (VendorID) REFERENCES Purchasing_Vendor(BusinessEntityID)
+
+);
+
+CREATE TABLE Bonus (
+    emp_id INT ,
+    bonus_date DATETIME,
+    bonus_amount DECIMAL(10,2)
+    PRIMARY KEY (emp_id, bonus_date),
+    FOREIGN KEY (emp_id) REFERENCES HumanResources_Employee(BusinessEntityID)
+);
+
+EXEC sp_MSforeachtable "ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL"
+
