@@ -6,6 +6,7 @@ Dit project is een sjabloon voor een PDM-pakket, ontworpen om gegevens te behere
 ## Inhoud
 
 - **Databases**: De map `databases/` bevat verschillende datasets, waaronder CSV-bestanden uit de AdventureWorks-database.
+- Creëer in SSMS een db genaamd: NorthWind en maak een nieuwe query aan en plak daarin het NorthWind.txt bestand
 - **Broncode**: Het bestand `sourceDataModel.ipynb` bevat een Jupyter Notebook voor gegevensmodellering en analyse.
 - **Configuratie**: Het project maakt gebruik van PDM voor pakketbeheer en Python 3.13.
 
