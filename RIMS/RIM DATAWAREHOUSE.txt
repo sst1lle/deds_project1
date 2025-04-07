@@ -79,7 +79,6 @@ CREATE TABLE Production_Product (
     UnitsOnOrder INT,
     SellStartDate DATE,
     SellEndDate DATE,
-    DiscontiuedDate DATE,
     SupplierID INT,
     FOREIGN KEY (ProductCategoryID) REFERENCES Production_ProductCategory(ProductCategoryID),
     FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
