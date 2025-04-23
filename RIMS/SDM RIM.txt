@@ -86,7 +86,6 @@ CREATE TABLE Suppliers (
     HomePage VARCHAR(1000)
 );
 
-
 CREATE TABLE Production_Product (
     MergedID INT PRIMARY KEY,
     ProductID INT,

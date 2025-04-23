@@ -727,17 +727,17 @@ else:
 #table: Sales_SalesOrderHeader
 #Bronnen: Sales_SalesOrderHeader + Orders + Sales_Order
 
-# ========== 1. Laad de datasets ==========
+#  1. Laad de datasets 
 sales_adventureworks_df = df_AdventureWorks.get("Sales_SalesOrderHeader")
 northwind_orders_df = df_NorthWind.get("Orders")
 aenc_sales_order_df = df_aenc.get("Sales_Order")
 
-# ========== 2. Voeg Source toe aan elke DataFrame ==========
+#  2. Voeg Source toe aan elke DataFrame 
 sales_adventureworks_df["Source"] = "AdventureWorks"
 northwind_orders_df["Source"] = "NorthWind"
 aenc_sales_order_df["Source"] = "AENC"
 
-# ========== 3. Hernoem kolommen voor consistentie ==========
+#  3. Hernoem kolommen voor consistentie 
 northwind_orders_df.rename(columns={
     "OrderID": "SalesOrderID",
     "OrderDate": "OrderDate",
@@ -759,7 +759,7 @@ aenc_sales_order_df.rename(columns={
     "region": "ShipRegion"
 }, inplace=True)
 
-# ========== 4. Zorg dat CustomerID overal een string is ==========
+#  4. Zorg dat CustomerID overal een string is 
 sales_adventureworks_df["CustomerID"] = sales_adventureworks_df["CustomerID"].astype(str)
 northwind_orders_df["CustomerID"] = northwind_orders_df["CustomerID"].astype(str)
 aenc_sales_order_df["CustomerID"] = aenc_sales_order_df["CustomerID"].astype(str)
@@ -767,14 +767,14 @@ aenc_sales_order_df["CustomerID"] = aenc_sales_order_df["CustomerID"].astype(str
 # Ook in de customer_mapping DataFrame
 customer_mapping["CustomerID"] = customer_mapping["CustomerID"].astype(str)
 
-# ========== 5. Ontbrekende kolommen aanvullen met None ==========
+#  5. Ontbrekende kolommen aanvullen met None 
 for df in [sales_adventureworks_df, northwind_orders_df, aenc_sales_order_df]:
     for col in ["RevisionNumber", "TerritoryID", "SubTotal", "DueDate",
                 "ShipDate", "ShipVia", "ShipCountry", "ShipRegion", "ShipCity"]:
         if col not in df.columns:
             df[col] = None
 
-# ========== 6. Selecteer en orden de relevante kolommen ==========
+#  6. Selecteer en orden de relevante kolommen 
 cols = [
     "SalesOrderID", "RevisionNumber", "OrderDate", "DueDate", "ShipDate", 
     "CustomerID", "SalesPersonID", "TerritoryID", "SubTotal", 
@@ -785,13 +785,13 @@ sales_adventureworks_df = sales_adventureworks_df[cols]
 northwind_orders_df = northwind_orders_df[cols]
 aenc_sales_order_df = aenc_sales_order_df[cols]
 
-# ========== 7. Concateneer de drie DataFrames ==========
+#  7. Concateneer de drie DataFrames 
 merged_sales_salesOrderHeader = pd.concat(
     [sales_adventureworks_df, northwind_orders_df, aenc_sales_order_df], 
     ignore_index=True
 )
 
-# ========== 8. CustomerID bijwerken via customer_mapping ==========
+#  8. CustomerID bijwerken via customer_mapping 
 # Hier nemen we aan dat 'customer_mapping' al bestaat, met kolommen ["CustomerID", "Source", "MergedCustomerID"].
 merged_sales_salesOrderHeader = merged_sales_salesOrderHeader.merge(
     customer_mapping,
@@ -803,7 +803,7 @@ merged_sales_salesOrderHeader = merged_sales_salesOrderHeader.merge(
 merged_sales_salesOrderHeader["CustomerID"] = merged_sales_salesOrderHeader["MergedCustomerID"]
 merged_sales_salesOrderHeader.drop(columns=["MergedCustomerID"], inplace=True)
 
-# ========== 9. SalesPersonID bijwerken via employee_mapping ==========
+#  9. SalesPersonID bijwerken via employee_mapping 
 # Hier nemen we aan dat 'employee_mapping' al bestaat, met kolommen ["BusinessEntityID", "Source", "MergedBusinessEntityID"].
 merged_sales_salesOrderHeader = merged_sales_salesOrderHeader.merge(
     employee_mapping,
@@ -817,7 +817,7 @@ merged_sales_salesOrderHeader = merged_sales_salesOrderHeader.merge(
 merged_sales_salesOrderHeader["SalesPersonID"] = merged_sales_salesOrderHeader["MergedBusinessEntityID"]
 merged_sales_salesOrderHeader.drop(columns=["BusinessEntityID", "MergedBusinessEntityID"], inplace=True)
 
-# ========== 10. Sla op in het data model en exporteer ==========
+#  10. Sla op in het data model en exporteer 
 dfs_sourcedatamodel["Sales_SalesOrderHeader"] = merged_sales_salesOrderHeader
 print(merged_sales_salesOrderHeader.head())
 
@@ -825,11 +825,7 @@ print(merged_sales_salesOrderHeader.head())
 
 
 
-#Table: Sales_SalesOrderDetail
-#Bronnen: Sales_SalesOrderDetail + OrderDetails + sales_order_item + product(aenc)
-
-
-# ----- 1. Laad de datasets -----
+# 1. Laad de datasets 
 Sales_SalesOrderDetail = df_AdventureWorks.get("Sales_SalesOrderDetail")
 Sales_Order_Item = df_aenc.get("Sales_Order_Item")
 OrderDetails = df_NorthWind.get("OrderDetails")
@@ -837,59 +833,52 @@ df_product2 = df_aenc.get("Product")
 
 df_product2.rename(columns={"id": "ProductID"}, inplace=True)
 
-# ----- 2. Voeg Source toe aan elke DataFrame -----
+# 2. Voeg Source toe aan elke DataFrame 
 Sales_SalesOrderDetail["Source"] = "AdventureWorks"
 Sales_Order_Item["Source"] = "AENC"
 OrderDetails["Source"] = "NorthWind"
 
-# ----- 3. Verwerk de AdventureWorks data -----
-# De AdventureWorks tabel bevat al de meeste gewenste kolommen
+# 3. Verwerk de AdventureWorks data 
 Sales_SalesOrderDetail = Sales_SalesOrderDetail.copy()
+Sales_SalesOrderDetail = Sales_SalesOrderDetail[[
+    "SalesOrderID", "SalesOrderDetailID", "OrderQty", "ProductID", 
+    "UnitPrice", "UnitPriceDiscount", "LineTotal", "Source"
+]]
 
-Sales_SalesOrderDetail = Sales_SalesOrderDetail[["SalesOrderID", "SalesOrderDetailID", "OrderQty", "ProductID", 
-                 "UnitPrice", "UnitPriceDiscount", "LineTotal", "Source"]]
-
-# ----- 4. Verwerk de AENC data -----
+# 4. Verwerk de AENC data 
 Sales_Order_Item = Sales_Order_Item.copy()
-# Hernoem de kolommen: 
-# id -> SalesOrderID, line_id -> SalesOrderDetailID, prod_id -> ProductID, quantity -> OrderQty
 Sales_Order_Item.rename(columns={
     "id": "SalesOrderID",
     "line_id": "SalesOrderDetailID",
     "prod_id": "ProductID",
     "quantity": "OrderQty"
 }, inplace=True)
-# Zorg dat OrderQty als string is
-# Voor AENC ontbreekt UnitPrice en UnitPriceDiscount:
-# Probeer de unit_price te halen uit een extra DataFrame (df_product2) uit de AENC-bron
-if  df_product2 is not None:
-    # Zorg dat in df_product2 ook de kolom "ProductID" voorkomt; dan mergen we de unit_price
+
+if df_product2 is not None:
     Sales_Order_Item = Sales_Order_Item.merge(df_product2[["ProductID", "unit_price"]], on="ProductID", how="left")
     Sales_Order_Item.rename(columns={"unit_price": "UnitPrice"}, inplace=True)
 else:
-   print("The table does not exist in database.")
+    print("The table does not exist in database.")
 
-# ----- 5. Verwerk de NorthWind data -----
+# 5. Verwerk de NorthWind data 
 OrderDetails = OrderDetails.copy()
-# Hernoem de kolommen: OrderID -> SalesOrderID, Quantity -> OrderQty, Discount -> UnitPriceDiscount
 OrderDetails.rename(columns={
     "OrderID": "SalesOrderID",
     "Quantity": "OrderQty",
     "Discount": "UnitPriceDiscount"
 }, inplace=True)
-# Creëer een SalesOrderDetailID omdat deze kolom ontbreekt: gebruik per SalesOrderID een cumulatieve telling
+
 OrderDetails["SalesOrderDetailID"] = OrderDetails.groupby("SalesOrderID").cumcount() + 1
-
 OrderDetails["LineTotal"] = None
-OrderDetails = OrderDetails[["SalesOrderID", "SalesOrderDetailID", "OrderQty", "ProductID", 
-               "UnitPrice", "UnitPriceDiscount", "LineTotal", "Source"]]
+OrderDetails = OrderDetails[[
+    "SalesOrderID", "SalesOrderDetailID", "OrderQty", "ProductID", 
+    "UnitPrice", "UnitPriceDiscount", "LineTotal", "Source"
+]]
 
-# ----- 6. Combineer de drie bronnen -----
+# 6. Combineer de drie bronnen 
 merged_orderdetail = pd.concat([Sales_SalesOrderDetail, Sales_Order_Item, OrderDetails], ignore_index=True)
 
-# ----- 7. Werk de ProductID bij via product_mapping -----
-# Verwacht dat product_mapping een DataFrame is met kolommen: ["ProductID", "Source", "MergedID"]
-# Merge de mapping op ProductID en Source en vervang de originele ProductID door de MergedID
+# 7. Werk de ProductID bij via product_mapping 
 merged_orderdetail = merged_orderdetail.merge(
     product_mapping,
     on=["ProductID", "Source"],
@@ -898,93 +887,15 @@ merged_orderdetail = merged_orderdetail.merge(
 merged_orderdetail["ProductID"] = merged_orderdetail["MergedID"]
 merged_orderdetail.drop(columns=["MergedID"], inplace=True)
 
-
-# ----- 1. Laad de datasets -----
-Sales_SalesOrderDetail = df_AdventureWorks.get("Sales_SalesOrderDetail")
-Sales_Order_Item = df_aenc.get("Sales_Order_Item")
-OrderDetails = df_NorthWind.get("OrderDetails")
-df_product2 = df_aenc.get("Product")  
-
-df_product2.rename(columns={"id": "ProductID"}, inplace=True)
-
-# ----- 2. Voeg Source toe aan elke DataFrame -----
-Sales_SalesOrderDetail["Source"] = "AdventureWorks"
-Sales_Order_Item["Source"] = "AENC"
-OrderDetails["Source"] = "NorthWind"
-
-# ----- 3. Verwerk de AdventureWorks data -----
-# De AdventureWorks tabel bevat al de meeste gewenste kolommen
-Sales_SalesOrderDetail = Sales_SalesOrderDetail.copy()
-
-Sales_SalesOrderDetail = Sales_SalesOrderDetail[["SalesOrderID", "SalesOrderDetailID", "OrderQty", "ProductID", 
-                 "UnitPrice", "UnitPriceDiscount", "LineTotal", "Source"]]
-
-# ----- 4. Verwerk de AENC data -----
-Sales_Order_Item = Sales_Order_Item.copy()
-# Hernoem de kolommen: 
-# id -> SalesOrderID, line_id -> SalesOrderDetailID, prod_id -> ProductID, quantity -> OrderQty
-Sales_Order_Item.rename(columns={
-    "id": "SalesOrderID",
-    "line_id": "SalesOrderDetailID",
-    "prod_id": "ProductID",
-    "quantity": "OrderQty"
-}, inplace=True)
-# Zorg dat OrderQty als string is
-# Voor AENC ontbreekt UnitPrice en UnitPriceDiscount:
-# Probeer de unit_price te halen uit een extra DataFrame (df_product2) uit de AENC-bron
-if  df_product2 is not None:
-    # Zorg dat in df_product2 ook de kolom "ProductID" voorkomt; dan mergen we de unit_price
-    Sales_Order_Item = Sales_Order_Item.merge(df_product2[["ProductID", "unit_price"]], on="ProductID", how="left")
-    Sales_Order_Item.rename(columns={"unit_price": "UnitPrice"}, inplace=True)
-else:
-   print("The table does not exist in database.")
-
-# ----- 5. Verwerk de NorthWind data -----
-OrderDetails = OrderDetails.copy()
-# Hernoem de kolommen: OrderID -> SalesOrderID, Quantity -> OrderQty, Discount -> UnitPriceDiscount
-OrderDetails.rename(columns={
-    "OrderID": "SalesOrderID",
-    "Quantity": "OrderQty",
-    "Discount": "UnitPriceDiscount"
-}, inplace=True)
-# Creëer een SalesOrderDetailID omdat deze kolom ontbreekt: gebruik per SalesOrderID een cumulatieve telling
-OrderDetails["SalesOrderDetailID"] = OrderDetails.groupby("SalesOrderID").cumcount() + 1
-
-OrderDetails["LineTotal"] = None
-OrderDetails = OrderDetails[["SalesOrderID", "SalesOrderDetailID", "OrderQty", "ProductID", 
-               "UnitPrice", "UnitPriceDiscount", "LineTotal", "Source"]]
-
-# ----- 6. Combineer de drie bronnen -----
-merged_orderdetail = pd.concat([Sales_SalesOrderDetail, Sales_Order_Item, OrderDetails], ignore_index=True)
-
-# ----- 7. Werk de ProductID bij via product_mapping -----
-# Verwacht dat product_mapping een DataFrame is met kolommen: ["ProductID", "Source", "MergedID"]
-# Merge de mapping op ProductID en Source en vervang de originele ProductID door de MergedID
-merged_orderdetail = merged_orderdetail.merge(
-    product_mapping,
-    on=["ProductID", "Source"],
-    how="left"
-)
-merged_orderdetail["ProductID"] = merged_orderdetail["MergedID"]
-merged_orderdetail.drop(columns=["MergedID"], inplace=True)
-
-# Verwijder de kolom ShipDate als deze bestaat
+# 8. Verwijder de kolom ShipDate als die bestaat
 if "ship_date" in merged_orderdetail.columns:
     merged_orderdetail = merged_orderdetail.drop(columns=["ship_date"])
 
-# ----- 8. Sla het resultaat op in het datamodel -----
+# 9. Sla het resultaat op in het datamodel 
 dfs_sourcedatamodel["Sales_SalesOrderDetail"] = merged_orderdetail
 
-# Print het resultaat
+# 10. Print preview
 print(merged_orderdetail.head())
-
-
-# ----- 8. Sla het resultaat op in het datamodel -----
-dfs_sourcedatamodel["Sales_SalesOrderDetail"] = merged_orderdetail
-
-# Print het resultaat
-print(merged_orderdetail.head())
-
 
 #Vullen SDM
 
